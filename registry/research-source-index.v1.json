@@ -1,0 +1,1608 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-09-26",
+  "generated_from": [
+    "notes/00-parecer-consolidado-plano.md",
+    "notes/03-riscos-privacidade-confiabilidade.md",
+    "notes/05-reavaliacao-wifi-sensing.md",
+    "notes/07-produto-ux-reavaliado.md",
+    "notes/08-reavaliacao-consolidada-desenvolvimento.md",
+    "notes/09-app-landscape-internacional-2026.md",
+    "notes/10-app-first-architecture-validation.md",
+    "notes/11-sdk-api-reuse-catalog-2026.md",
+    "notes/12-local-agent-gemini-translation-harness.md",
+    "notes/13-deep-radar-speech-sdk-scan.md",
+    "notes/14-global-emergency-apis-oss-skills.md",
+    "notes/15-conflict-intelligence-ui-redesign.md",
+    "notes/16-executive-product-skills-operating-model.md",
+    "notes/17-map-location-offline-sdk-research.md",
+    "notes/18-sprint-roadmap-operational.md",
+    "notes/19-local-media-intelligence-research.md",
+    "notes/20-situation-driven-core.md",
+    "notes/21-agent-taskboard.md"
+  ],
+  "semantics": "Presence means researched/referenced by DEFENSOR. It does not imply runtime dependency, endorsement, SLA or production readiness.",
+  "counts": {
+    "source_documents": 18,
+    "unique_urls": 193,
+    "github_urls": 53,
+    "distinct_github_repositories": 49,
+    "non_github_urls": 140
+  },
+  "sources": [
+    {
+      "url": "https://02.mchs.gov.ru/deyatelnost/press-centr/novosti/5785783",
+      "host": "02.mchs.gov.ru",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://34.mchs.gov.ru/deyatelnost/press-centr/vse_novosti/5774060",
+      "host": "34.mchs.gov.ru",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://78.mchs.gov.ru/deyatelnost/press-centr/novosti/5784346",
+      "host": "78.mchs.gov.ru",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://acleddata.com/api-documentation/getting-started",
+      "host": "acleddata.com",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/15-conflict-intelligence-ui-redesign.md"
+      ]
+    },
+    {
+      "url": "https://acoar.com/",
+      "host": "acoar.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://aerial.ai/resources-blog/aerial-available-on-broadcom-ap-and-mesh-solutions",
+      "host": "aerial.ai",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://ai.google.dev/edge/api/mediapipe/python/mp/tasks/text/TextEmbedder",
+      "host": "ai.google.dev",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://ai.google.dev/gemma/docs/integrations/mobile",
+      "host": "ai.google.dev",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://alertingauthority.wmo.int/",
+      "host": "alertingauthority.wmo.int",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://alerts.ncdr.nat.gov.tw/",
+      "host": "alerts.ncdr.nat.gov.tw",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://alphacephei.com/vosk/",
+      "host": "alphacephei.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://api.atlas.jor.br/api/v1",
+      "host": "api.atlas.jor.br",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://api.atlas.jor.br/docs",
+      "host": "api.atlas.jor.br",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://api.geonet.org.nz/",
+      "host": "api.geonet.org.nz",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://api.meteoalarm.org/",
+      "host": "api.meteoalarm.org",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://api.worldmonitor.app",
+      "host": "api.worldmonitor.app",
+      "category": "other",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://apidoc.reliefweb.int/",
+      "host": "apidoc.reliefweb.int",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://apps.apple.com/us/app/israel-home-front-command/id1542010719",
+      "host": "apps.apple.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://atlas.jor.br/api/documentacao-da-api/",
+      "host": "atlas.jor.br",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://atlas.jor.br/api/regras-de-uso-da-api-do-atlas-da-noticia/",
+      "host": "atlas.jor.br",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://avisos.inmet.gov.br/",
+      "host": "avisos.inmet.gov.br",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "host": "blog.gdeltproject.org",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://blog.gdeltproject.org/gdelt-geo-2-0-api-debuts/",
+      "host": "blog.gdeltproject.org",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://currentsapi.services/",
+      "host": "currentsapi.services",
+      "category": "other",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://developer.acconeer.com/home/a121-docs-software/",
+      "host": "developer.acconeer.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/ai/appfunctions",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md",
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/ai/appfunctions/add-appfunctions",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/ai/intelligence-system",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/background-work/services/fgs/restrictions-bg-start",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/connectivity/overview",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/07-produto-ux-reavaliado.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/connectivity/uwb",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/connectivity/wifi/wifi-aware",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/connectivity/wifi/wifi-rtt",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md",
+        "notes/07-produto-ux-reavaliado.md",
+        "notes/08-reavaliacao-consolidada-desenvolvimento.md",
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/connectivity/wifi/wifi-scan",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/07-produto-ux-reavaliado.md",
+        "notes/08-reavaliacao-consolidada-desenvolvimento.md",
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/sensors-and-location/location/background",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/sensors-and-location/location/permissions/background",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop/ui/compose/notifications",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/jetpack/androidx/releases/appfunctions",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/jetpack/androidx/releases/core-uwb",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/privacy-and-security/minimize-permission-requests",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/privacy-and-security/security-tips",
+      "host": "developer.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/corelocation",
+      "host": "developer.apple.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/corelocation/clmonitor-2r51v",
+      "host": "developer.apple.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/blog/chrome-at-io26",
+      "host": "developer.chrome.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md",
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/ai/built-in/overview",
+      "host": "developer.chrome.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/ai/language-detection",
+      "host": "developer.chrome.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/ai/translator-api",
+      "host": "developer.chrome.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developer.chrome.com/docs/ai/webmcp",
+      "host": "developer.chrome.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md",
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/android/reference/com/google/android/gms/location/FusedLocationProviderClient",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/android/reference/com/google/android/gms/location/GeofencingClient",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/genai/prompt/android",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/genai/prompt/android/prompt-design",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/12-local-agent-gemini-translation-harness.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/genai/prompt/android/structured-output",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/genai/speech-recognition/android",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/language/identification/android",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/language/translation/android",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/ml-kit/release-notes",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://developers.google.com/nearby/connections/overview",
+      "host": "developers.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://docs.cognitivesystems.com/",
+      "host": "docs.cognitivesystems.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://docs.cognitivesystems.com/assets/specs/api/core",
+      "host": "docs.cognitivesystems.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://docs.here.com/here-sdk/docs/android-offline-maps",
+      "host": "docs.here.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://docs.here.com/here-sdk/docs/android-offline-maps-routing",
+      "host": "docs.here.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://docs.mapbox.com/android/navigation/guides/advanced/offline/",
+      "host": "docs.mapbox.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2.pdf",
+      "host": "docs.oasis-open.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://docs.oasis-open.org/emergency/cap/v1.2/cs01/CAP-v1.2-cs01.html",
+      "host": "docs.oasis-open.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/",
+      "host": "earthquake.usgs.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "host": "earthquake.usgs.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://eonet.gsfc.nasa.gov/docs/v3",
+      "host": "eonet.gsfc.nasa.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://firebase.google.com/docs/cloud-messaging/android-message-priority",
+      "host": "firebase.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/",
+      "host": "firms.modaps.eosdis.nasa.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://firms.modaps.eosdis.nasa.gov/web-services/",
+      "host": "firms.modaps.eosdis.nasa.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/AndyTheFactory/newspaper4k",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/DIYgod/RSSHub",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/EventRegistry/event-registry-python",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/GateNLP/ultimate-sitemap-parser",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Gi-z/CSIKit",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md",
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/GoogleChromeLabs/use-webmcp-tool",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/GoogleChromeLabs/webmcp-tools",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/KDE/foss-public-alert-server",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md",
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/NordicSemiconductor/Android-BLE-Library",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/RBozydar/py-gdelt",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/World-Meteorological-Organization/pywis-pubsub",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/a5c-ai/babysitter",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/16-executive-product-skills-operating-model.md"
+      ]
+    },
+    {
+      "url": "https://github.com/adbar/trafilatura",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/alex9smith/gdelt-doc-api",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/16-executive-product-skills-operating-model.md"
+      ]
+    },
+    {
+      "url": "https://github.com/alphacep/vosk-api",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://github.com/android/appfunctions",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/comaps/comaps",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/deanpeters/Product-Manager-Skills",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/16-executive-product-skills-operating-model.md"
+      ]
+    },
+    {
+      "url": "https://github.com/espressif/esp-csi",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md",
+        "notes/08-reavaliacao-consolidada-desenvolvimento.md",
+        "notes/10-app-first-architecture-validation.md",
+        "notes/11-sdk-api-reuse-catalog-2026.md",
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://github.com/fastapi/fastapi",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/fhamborg/news-please",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/blob/master/docs/android.md",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ggml-org/whisper.cpp/tree/master/examples/whisper.android",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/google/adk-kotlin",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/google/adk-kotlin/blob/main/examples/android/README.md",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/k2-fsa/sherpa-onnx",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://github.com/koala73/worldmonitor",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/koala73/worldmonitor/blob/main/docs/agent-skills.mdx",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/kurtmckee/feedparser",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/makinacorpus/maplibre-offline-pmtiles",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/maplibre/maplibre-navigation-android",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/mediacloud/api-client",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/modelcontextprotocol/python-sdk",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/moltrus/google-news-mcp",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/objectbox/objectbox-java",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/organicmaps/api-android",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/organicmaps/api-ios",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/rembertdesigns/gemma3n-disaster-assistant",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ruvnet/RuView",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md",
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/sahana/SAMBRO",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/sahana/eden",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/seemoo-lab/nexmon_csi",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md",
+        "notes/08-reavaliacao-consolidada-desenvolvimento.md",
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://github.com/soniqo/speech-android",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md",
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/sqliteai/sqlite-vector",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/sqliteai/sqlite-vector/releases",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/uber/h3",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/uber/h3-java",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ushahidi/platform",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/valhalla/valhalla",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://github.com/voiceping-ai/ios-android-offline-speech-translation",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md",
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://github.com/wifisensing/PicoScenes-Manual",
+      "host": "github.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://gitlab.com/alert-hub-org/google-cap-library",
+      "host": "gitlab.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://gitlab.com/ddeeproton/android-vosk",
+      "host": "gitlab.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/dev.davidv.translator.yml",
+      "host": "gitlab.com",
+      "category": "open-source/code",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://idapfile.mdr.gov.br/idap/api/rss/cap",
+      "host": "idapfile.mdr.gov.br",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://ieee-aess.org/event/webinar/passive-through-wall-human-sensing-wifi-2026",
+      "host": "ieee-aess.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://ieeexplore.ieee.org/document/9393557",
+      "host": "ieeexplore.ieee.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md"
+      ]
+    },
+    {
+      "url": "https://k2-fsa.github.io/sherpa/onnx/android/build-sherpa-onnx.html",
+      "host": "k2-fsa.github.io",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://loda.gov.ua/en/useful-info/129927",
+      "host": "loda.gov.ua",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://maplibre.org/",
+      "host": "maplibre.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://maplibre.org/maplibre-native/android/examples/data/PMTiles/",
+      "host": "maplibre.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://maplibre.org/projects/native/",
+      "host": "maplibre.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://mchs.gov.ru/deyatelnost/press-centr/novosti/5777310",
+      "host": "mchs.gov.ru",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://mediastack.com/",
+      "host": "mediastack.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://mypr-nodejs.standards.ieee.org/mypr-file/par/8527/mypr",
+      "host": "mypr-nodejs.standards.ieee.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/07-produto-ux-reavaliado.md"
+      ]
+    },
+    {
+      "url": "https://myshake.berkeley.edu/",
+      "host": "myshake.berkeley.edu",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://myshake.berkeley.edu/FAQ_en.html",
+      "host": "myshake.berkeley.edu",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://nerv.app/download.html",
+      "host": "nerv.app",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://newsapi.ai/documentation",
+      "host": "newsapi.ai",
+      "category": "other",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://newsdata.io/blog/exploring-region-parameter-of-newsdata-io/",
+      "host": "newsdata.io",
+      "category": "other",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://newsdata.io/blog/latest-news-endpoint/",
+      "host": "newsdata.io",
+      "category": "other",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.alert.meserhadash",
+      "host": "play.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.ukrainealarm",
+      "host": "play.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=disasterAlert.PDC",
+      "host": "play.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://ps.zpj.io/",
+      "host": "ps.zpj.io",
+      "category": "other",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://publikationen.bibliothek.kit.edu/1000185756",
+      "host": "publikationen.bibliothek.kit.edu",
+      "category": "other",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md"
+      ]
+    },
+    {
+      "url": "https://pypi.org/project/cap-tools/",
+      "host": "pypi.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://rfpose.csail.mit.edu/",
+      "host": "rfpose.csail.mit.edu",
+      "category": "other",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md"
+      ]
+    },
+    {
+      "url": "https://source.android.com/docs/core/connect/wifi-hal",
+      "host": "source.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md"
+      ]
+    },
+    {
+      "url": "https://source.android.com/docs/core/ota/modular-system/cellbroadcast",
+      "host": "source.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://source.android.com/docs/core/permissions/perms-allowlist",
+      "host": "source.android.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://stadiamaps.github.io/ferrostar/",
+      "host": "stadiamaps.github.io",
+      "category": "other",
+      "referenced_by": [
+        "notes/17-map-location-offline-sdk-research.md"
+      ]
+    },
+    {
+      "url": "https://standards.ieee.org/ieee/802.11/11852/",
+      "host": "standards.ieee.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://standards.ieee.org/ieee/802.11bf/11574/",
+      "host": "standards.ieee.org",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md",
+        "notes/08-reavaliacao-consolidada-desenvolvimento.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/10144311",
+      "host": "support.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/11150561",
+      "host": "support.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9799150",
+      "host": "support.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9888077",
+      "host": "support.google.com",
+      "category": "platform/sdk",
+      "referenced_by": [
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://ucdp.uu.se/downloads/",
+      "host": "ucdp.uu.se",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/15-conflict-intelligence-ui-redesign.md"
+      ]
+    },
+    {
+      "url": "https://wis2bra.inmet.gov.br/oapi/collections/discovery-metadata/items/urn%3Awmo%3Amd%3Abr-inmet%3Aalerts?f=html",
+      "host": "wis2bra.inmet.gov.br",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://worldmonitor.app/.well-known/agent-skills/index.json",
+      "host": "worldmonitor.app",
+      "category": "other",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://worldmonitor.app/mcp",
+      "host": "worldmonitor.app",
+      "category": "other",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://worldmonitor.app/openapi.yaml",
+      "host": "worldmonitor.app",
+      "category": "other",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://www.alert-hub.org/",
+      "host": "www.alert-hub.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/Einstellungen-Android/einstellungen-android.html",
+      "host": "www.bbk.bund.de",
+      "category": "other",
+      "referenced_by": [
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/Funktion-Inhalt/funktion-inhalt_node.html",
+      "host": "www.bbk.bund.de",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/warn-app-nina_node.html",
+      "host": "www.bbk.bund.de",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.emsc-csem.org/lastquake/information_channels/lastquake_app/",
+      "host": "www.emsc-csem.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.fema.gov/about/news-multimedia/mobile-products",
+      "host": "www.fema.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system/technology-developers",
+      "host": "www.fema.gov",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://www.gdacs.org/gdacsapi/swagger/index.html",
+      "host": "www.gdacs.org",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md",
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://www.gdeltproject.org/",
+      "host": "www.gdeltproject.org",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/15-conflict-intelligence-ui-redesign.md"
+      ]
+    },
+    {
+      "url": "https://www.gov.br/anatel/pt-br/dados/utilidade-publica/alertas-de-desastres/defesa-civil-alerta",
+      "host": "www.gov.br",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/00-parecer-consolidado-plano.md",
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://www.gov.br/anatel/pt-br/dados/utilidade-publica/alertas-de-desastres/perguntas-e-respostas",
+      "host": "www.gov.br",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/03-riscos-privacidade-confiabilidade.md"
+      ]
+    },
+    {
+      "url": "https://www.japan.originwirelessai.com/partner-with-us",
+      "host": "www.japan.originwirelessai.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.jma.go.jp/",
+      "host": "www.jma.go.jp",
+      "category": "authority/scientific/emergency",
+      "referenced_by": [
+        "notes/14-global-emergency-apis-oss-skills.md"
+      ]
+    },
+    {
+      "url": "https://www.media.mit.edu/projects/seeing-through-walls-computer-vision/overview/",
+      "host": "www.media.mit.edu",
+      "category": "other",
+      "referenced_by": [
+        "notes/07-produto-ux-reavaliado.md"
+      ]
+    },
+    {
+      "url": "https://www.mediacloud.org/documentation/",
+      "host": "www.mediacloud.org",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://www.mois.go.kr/eng/bbs/type002/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000022&nttId=126882",
+      "host": "www.mois.go.kr",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.newscatcherapi.com/docs/local-news-api/",
+      "host": "www.newscatcherapi.com",
+      "category": "osint/media",
+      "referenced_by": [
+        "notes/19-local-media-intelligence-research.md"
+      ]
+    },
+    {
+      "url": "https://www.nist.gov/publications/ieee-80211bf-enabling-widespread-adoption-wi-fi-sensing",
+      "host": "www.nist.gov",
+      "category": "standard/research",
+      "referenced_by": [
+        "notes/05-reavaliacao-wifi-sensing.md",
+        "notes/08-reavaliacao-consolidada-desenvolvimento.md",
+        "notes/10-app-first-architecture-validation.md"
+      ]
+    },
+    {
+      "url": "https://www.originwirelessai.com/about-us/",
+      "host": "www.originwirelessai.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://www.originwirelessai.com/inventing-wifi-sensing-an-interview-with-dr-ray-liu/",
+      "host": "www.originwirelessai.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/13-deep-radar-speech-sdk-scan.md"
+      ]
+    },
+    {
+      "url": "https://www.originwirelessai.com/wifi-sensing/",
+      "host": "www.originwirelessai.com",
+      "category": "other",
+      "referenced_by": [
+        "notes/11-sdk-api-reuse-catalog-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.pdc.org/disasteraware/",
+      "host": "www.pdc.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.pdc.org/help/smartalert/",
+      "host": "www.pdc.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/mobile-apps.html",
+      "host": "www.redcross.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.watchduty.org/",
+      "host": "www.watchduty.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    },
+    {
+      "url": "https://www.watchduty.org/how-it-works/overview",
+      "host": "www.watchduty.org",
+      "category": "other",
+      "referenced_by": [
+        "notes/09-app-landscape-internacional-2026.md"
+      ]
+    }
+  ]
+}
