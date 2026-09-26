@@ -72,8 +72,31 @@ const events = [
 ];
 
 
+
+const demoPersonalImpactByEvent = {
+  "evt-conflict-01": "MOBILIDADE · DEGRADADO",
+  "evt-unrest-01": "MOBILIDADE · ATENÇÃO",
+  "evt-infra-01": "ENERGIA/COMUNICAÇÃO · DEGRADADO",
+  "evt-weather-01": "MOBILIDADE · MONITORAR",
+  "evt-seismic-01": "SEM IMPACTO DIRETO CONHECIDO",
+  "evt-fire-01": "INFORMAÇÃO · MONITORAR",
+  "evt-sensor-01": "NENHUMA PROMOÇÃO AUTOMÁTICA"
+};
+const demoSeverityLabels = {
+  critical: "CRÍTICO",
+  warning: "ATENÇÃO",
+  watch: "MONITORAR",
+  experimental: "EXPERIMENTAL"
+};
+events.forEach(event => {
+  event.personalImpact = demoPersonalImpactByEvent[event.id] || "DESCONHECIDO";
+  event.severityLabel = demoSeverityLabels[event.severity] || "DESCONHECIDO";
+});
+
+
 const mySituation = {
   state: "PREPARAÇÃO",
+  personalImpact: "DEGRADADO",
   whatChanged: "Cenário sintético BSX-001: chuva severa, conectividade intermitente e uma opção de mobilidade indisponível.",
   impact: "Seu plano depende de comunicação e deslocamento; o protótipo mantém alternativas e marca dados vencidos explicitamente.",
   guidance: "Consulte somente orientação vinculada a fonte/protocolo e mantenha o plano offline acessível.",
@@ -226,6 +249,7 @@ function detailMarkup(event, mobile = false) {
       '<div class="detail-close-row"><span class="detail-type"><i></i>' + meta.label + '</span></div>') +
     '<h2 class="detail-title">' + event.title + '</h2>' +
     '<div class="detail-meta"><span>' + event.time + '</span><span>' + event.area + '</span><span>frescor ' + event.freshness + '</span></div>' +
+    '<div style="display:flex;gap:7px;flex-wrap:wrap;margin:10px 0 14px"><span class="state-pill">Evento: ' + event.severityLabel + '</span><span class="state-pill">Impacto pessoal: ' + event.personalImpact + '</span></div>' +
     '<p class="detail-summary">' + event.summary + '</p>' +
     '<div class="detail-block"><h3>O que muda para você</h3><p>' + event.impact + '</p></div>' +
     '<div class="detail-block"><h3>Origem e estado</h3><div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:9px"><span class="source-pill">' + event.source + '</span>' + state + '</div><p>' + event.confidence + '</p></div>' +
@@ -405,6 +429,7 @@ function renderMySituation() {
   if (!mySituationSummary) return;
   mySituationSummary.innerHTML =
     '<div class="summary-kicker"><span class="pulse"></span> ' + mySituation.state + '</div>' +
+    '<p><strong>Impacto pessoal:</strong> ' + mySituation.personalImpact + '</p>' +
     '<p><strong>O que mudou:</strong> ' + mySituation.whatChanged + '</p>' +
     '<p><strong>Como isso me afeta:</strong> ' + mySituation.impact + '</p>' +
     '<p><strong>O que fazer:</strong> ' + mySituation.guidance + '</p>' +
