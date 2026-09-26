@@ -239,3 +239,32 @@ Implementation artifacts:
 - [Adversarial reliability suite](testdata/adversarial-v0.json)
 
 Tracked work packages: #2 through #11.
+
+
+## Run the prototype locally
+
+The static prototype lives in `prototype/`. Do not start a generic HTTP server from the repository root, because the root has no site `index.html` and Python will correctly show a directory listing.
+
+Preferred:
+
+```bash
+python3 serve.py
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000/
+```
+
+Equivalent one-liner:
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1 --directory prototype
+```
+
+The server must expose the entire `prototype/` directory, not only the HTML file, because `index.html` loads `styles.css` and `app.js`.
+
+## GitHub Pages
+
+`.github/workflows/pages.yml` publishes **only** `prototype/` as the Pages artifact. Research notes, specs and test data are not part of the public site artifact.
