@@ -1,0 +1,87 @@
+{
+  "scenario_id": "BSX-001",
+  "version": "1.0.0",
+  "title": "Baixada Santista progressive service degradation",
+  "clock": {
+    "now": "2026-09-26T12:00:00.000Z"
+  },
+  "geography": ["São Vicente", "Santos", "Guarujá"],
+  "purpose": "Validate situation-driven civil resilience under compound degradation without modeling hostile tactics.",
+  "events": [
+    {
+      "id": "bsx-mobility-001",
+      "type": "MOBILITY_DISRUPTION",
+      "geography": ["São Vicente", "Santos"],
+      "conditions": ["ROUTE_UNAVAILABLE"],
+      "effects": [
+        {
+          "dimension": "mobility",
+          "state": "BLOCKED",
+          "dependency_tags": ["bus-corridor-A"]
+        }
+      ],
+      "provenance": {
+        "source_id": "fixture-authority-mobility",
+        "evidence_class": "AUTHORITATIVE",
+        "authority": "FIXTURE_AUTHORITY",
+        "jurisdiction": "BSX_FIXTURE",
+        "original_timestamp": "2026-09-26T11:55:00.000Z",
+        "ingestion_timestamp": "2026-09-26T11:56:00.000Z",
+        "max_age_ms": 1800000,
+        "original_reference": "fixture://bsx-001/mobility"
+      }
+    },
+    {
+      "id": "bsx-comms-001",
+      "type": "COMMUNICATIONS_DEGRADATION",
+      "geography": ["São Vicente", "Santos", "Guarujá"],
+      "conditions": ["INTERMITTENT_MOBILE_DATA"],
+      "effects": [
+        {
+          "dimension": "communications",
+          "state": "DEGRADED",
+          "dependency_tags": ["mobile-data"]
+        },
+        {
+          "dimension": "information_access",
+          "state": "DEGRADED",
+          "dependency_tags": []
+        }
+      ],
+      "provenance": {
+        "source_id": "fixture-operational-comms",
+        "evidence_class": "OPERATIONAL",
+        "authority": "FIXTURE_OPERATOR",
+        "jurisdiction": "BSX_FIXTURE",
+        "original_timestamp": "2026-09-26T11:50:00.000Z",
+        "ingestion_timestamp": "2026-09-26T11:52:00.000Z",
+        "max_age_ms": 1800000,
+        "original_reference": "fixture://bsx-001/comms"
+      }
+    }
+  ],
+  "sync": {
+    "last_successful_sync": "2026-09-26T11:58:00.000Z",
+    "information_age_ms": 120000,
+    "offline_pack_state": "CURRENT",
+    "positive_current_baseline": false
+  },
+  "expected": {
+    "BSX-PROFILE-A": {
+      "situation_state": "PREPARATION",
+      "mobility": "BLOCKED",
+      "communications": "DEGRADED"
+    },
+    "BSX-PROFILE-B": {
+      "situation_state": "PREPARATION",
+      "mobility": "WATCH",
+      "communications": "WATCH"
+    }
+  },
+  "invariants": [
+    "Same event may yield different personal impact.",
+    "Loss of connectivity never implies safety.",
+    "Core evaluation does not require a remote LLM.",
+    "Provenance and freshness survive into MySituation."
+  ]
+}
