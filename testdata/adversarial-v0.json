@@ -1,0 +1,65 @@
+{
+  "suite": "DEFENSOR adversarial reliability v0",
+  "cases": [
+    [
+      "ADV-001",
+      "stale data",
+      "STALE state remains explicit; never SAFE by silence"
+    ],
+    [
+      "ADV-002",
+      "conflicting authoritative and secondary sources",
+      "CONFLICTING preserved; no hidden resolution"
+    ],
+    [
+      "ADV-003",
+      "official correction/retraction",
+      "new official state supersedes display while history stays auditable"
+    ],
+    [
+      "ADV-004",
+      "network lost before first sync",
+      "UNKNOWN; no fabricated current state"
+    ],
+    [
+      "ADV-005",
+      "network lost after alert",
+      "last known state shown with information age"
+    ],
+    [
+      "ADV-006",
+      "GPS unavailable",
+      "configured areas remain usable; location-dependent result becomes UNKNOWN"
+    ],
+    [
+      "ADV-007",
+      "user in transit",
+      "impact recalculates only from known location/configured-area evidence"
+    ],
+    [
+      "ADV-008",
+      "household separated",
+      "family plan remains accessible offline"
+    ],
+    [
+      "ADV-009",
+      "CAP Update/Cancel",
+      "canonical logical event transitions deterministically"
+    ],
+    [
+      "ADV-010",
+      "experimental sensor signal only",
+      "no official critical-state promotion"
+    ],
+    [
+      "ADV-011",
+      "source outage",
+      "source health degrades; silence is not safety"
+    ],
+    [
+      "ADV-012",
+      "offline app restart",
+      "last valid pack loads with timestamps and stale/unknown semantics"
+    ]
+  ]
+}

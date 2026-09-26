@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1.0",
+  "sources": [
+    {
+      "id": "br-inmet-wis2-cap",
+      "name": "INMET WIS2 / CAP alerts",
+      "evidence_class": "AUTHORITATIVE",
+      "jurisdiction": "Brazil",
+      "domains": [
+        "weather"
+      ],
+      "format": [
+        "CAP",
+        "WIS2"
+      ],
+      "update_cancel_support": "TO_VERIFY_IN_SPIKE",
+      "geography": "source_supplied",
+      "languages": [
+        "pt-BR"
+      ],
+      "status": "PILOT_CANDIDATE",
+      "documentation": [
+        "https://wis2bra.inmet.gov.br/",
+        "https://avisos.inmet.gov.br/"
+      ]
+    },
+    {
+      "id": "br-cemaden-ped",
+      "name": "CEMADEN Plataforma de Entrega de Dados",
+      "evidence_class": "SCIENTIFIC_OPERATIONAL",
+      "jurisdiction": "Brazil",
+      "domains": [
+        "environmental_monitoring",
+        "geo_hydrological_risk"
+      ],
+      "format": [
+        "API"
+      ],
+      "update_cancel_support": "NOT_APPLICABLE_OR_UNKNOWN",
+      "geography": "station_and_product_dependent",
+      "languages": [
+        "pt-BR"
+      ],
+      "status": "REGISTRY_CANDIDATE",
+      "documentation": [
+        "https://sws.cemaden.gov.br/"
+      ]
+    },
+    {
+      "id": "br-defesa-civil-alerta",
+      "name": "Defesa Civil Alerta",
+      "evidence_class": "AUTHORITATIVE",
+      "jurisdiction": "Brazil",
+      "domains": [
+        "civil_defense_warning"
+      ],
+      "format": [
+        "CELL_BROADCAST_CHANNEL"
+      ],
+      "update_cancel_support": "UPSTREAM_AUTHORITY_DEPENDENT",
+      "geography": "authority_defined",
+      "languages": [
+        "pt-BR"
+      ],
+      "status": "REDUNDANT_OFFICIAL_CHANNEL_NOT_APP_DEPENDENCY",
+      "notes": "DEFENSOR must not depend on intercepting the device Cell Broadcast channel; consume upstream official sources when documented."
+    }
+  ],
+  "rules": [
+    "Unknown contract fields remain UNKNOWN.",
+    "Adapters preserve upstream identity and raw evidence.",
+    "Community or experimental sources cannot be silently reclassified as authoritative."
+  ]
+}

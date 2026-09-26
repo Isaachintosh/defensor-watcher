@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.2.0",
+  "status": "prototype",
+  "evidence_classes": [
+    "AUTHORITATIVE",
+    "SCIENTIFIC_OPERATIONAL",
+    "OPERATIONAL",
+    "CURATED",
+    "MEDIA_OSINT",
+    "COMMUNITY",
+    "EXPERIMENTAL"
+  ],
+  "required_source_fields": [
+    "id","name","evidence_class","jurisdiction","domains","transport",
+    "documentation","implementation_status","health_policy","freshness_policy"
+  ],
+  "sources": [
+    {
+      "id": "br-inmet-wis2-cap",
+      "name": "INMET WIS2 / CAP alerts",
+      "evidence_class": "AUTHORITATIVE",
+      "jurisdiction": "Brazil",
+      "domains": ["weather"],
+      "transport": ["CAP","WIS2"],
+      "documentation": ["https://wis2bra.inmet.gov.br/","https://avisos.inmet.gov.br/"],
+      "implementation_status": "PILOT_CANDIDATE",
+      "health_policy": {"outage_state":"SOURCE_DEGRADED","silence_means_safe":false},
+      "freshness_policy": {"max_age_ms":"UNKNOWN_UNTIL_ADAPTER_SPIKE","source_timestamp_required":true},
+      "update_cancel_support": "VERIFY_IN_ADAPTER_SPIKE"
+    },
+    {
+      "id": "br-cemaden-ped",
+      "name": "CEMADEN Plataforma de Entrega de Dados",
+      "evidence_class": "SCIENTIFIC_OPERATIONAL",
+      "jurisdiction": "Brazil",
+      "domains": ["environmental_monitoring","geo_hydrological_risk"],
+      "transport": ["API"],
+      "documentation": ["https://sws.cemaden.gov.br/"],
+      "implementation_status": "PILOT_CANDIDATE",
+      "health_policy": {"outage_state":"SOURCE_DEGRADED","silence_means_safe":false},
+      "freshness_policy": {"max_age_ms":"PRODUCT_DEPENDENT","source_timestamp_required":true},
+      "update_cancel_support": "NOT_APPLICABLE_OR_PRODUCT_DEPENDENT"
+    },
+    {
+      "id": "br-defesa-civil-alerta",
+      "name": "Defesa Civil Alerta",
+      "evidence_class": "AUTHORITATIVE",
+      "jurisdiction": "Brazil",
+      "domains": ["civil_defense_warning"],
+      "transport": ["CELL_BROADCAST_CHANNEL"],
+      "documentation": ["https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/defesa-civil-alerta"],
+      "implementation_status": "REDUNDANT_OFFICIAL_CHANNEL_NOT_APP_DEPENDENCY",
+      "health_policy": {"outage_state":"UNKNOWN","silence_means_safe":false},
+      "freshness_policy": {"max_age_ms":"AUTHORITY_DEFINED","source_timestamp_required":true},
+      "update_cancel_support": "AUTHORITY_DEFINED",
+      "adapter_rule": "Do not depend on intercepting the handset Cell Broadcast channel."
+    }
+  ],
+  "adapter_invariants": [
+    "Preserve upstream source identity and raw reference.",
+    "Unknown contract fields remain UNKNOWN.",
+    "No adapter may upgrade evidence class.",
+    "Source outage or silence never resolves to safe."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "status": "prototype",
+  "privacy_principle": "data_minimization_and_local_evaluation_first",
+  "fields": {
+    "configured_areas": {
+      "type": "array",
+      "required": false
+    },
+    "household_members": {
+      "type": "array",
+      "required": false,
+      "store_only_response_relevant_attributes": true
+    },
+    "mobility_needs": {
+      "type": "array",
+      "required": false
+    },
+    "accessibility_needs": {
+      "type": "array",
+      "required": false
+    },
+    "transport_capabilities": {
+      "type": "array",
+      "required": false
+    },
+    "meeting_points": {
+      "type": "array",
+      "required": false
+    },
+    "essential_contacts": {
+      "type": "array",
+      "required": false
+    },
+    "essential_dependencies": {
+      "type": "array",
+      "required": false
+    },
+    "offline_storage_consent": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "controls": [
+    "export_profile",
+    "delete_profile",
+    "clear_offline_pack"
+  ],
+  "prohibited_defaults": [
+    "continuous_precise_location",
+    "unbounded_free_text_for_critical_rules"
+  ]
+}
