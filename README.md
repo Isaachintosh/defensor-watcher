@@ -152,6 +152,9 @@ Local and connected models provide language understanding, protocol retrieval, e
 - [Deep radar + offline speech SDK scan](notes/13-deep-radar-speech-sdk-scan.md)
 - [Global emergency APIs, OSS platforms and agent skills](notes/14-global-emergency-apis-oss-skills.md)
 - [Conflict intelligence + command-center UX redesign](notes/15-conflict-intelligence-ui-redesign.md)
+- [Executive/product skills operating model](notes/16-executive-product-skills-operating-model.md)
+- [Map, geolocation and offline SDK research](notes/17-map-location-offline-sdk-research.md)
+- [Operational sprint roadmap](notes/18-sprint-roadmap-operational.md)
 - [Navigable prototype](prototype/index.html)
 
 ## Parallel engineering targets
