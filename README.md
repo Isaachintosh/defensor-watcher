@@ -155,6 +155,7 @@ Local and connected models provide language understanding, protocol retrieval, e
 - [Executive/product skills operating model](notes/16-executive-product-skills-operating-model.md)
 - [Map, geolocation and offline SDK research](notes/17-map-location-offline-sdk-research.md)
 - [Operational sprint roadmap](notes/18-sprint-roadmap-operational.md)
+- [Local media intelligence: APIs, SDKs, OSS and triangulation](notes/19-local-media-intelligence-research.md)
 - [Navigable prototype](prototype/index.html)
 
 ## Parallel engineering targets
