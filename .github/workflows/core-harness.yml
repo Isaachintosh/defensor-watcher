@@ -35,5 +35,11 @@ jobs:
         with:
           node-version: "24"
 
-      - name: Run deterministic core harness
-        run: node tests/core-harness.mjs
+      - name: Run deterministic harnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          for test_file in tests/*-harness.mjs; do
+            echo "==> $test_file"
+            node "$test_file"
+          done
