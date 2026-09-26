@@ -1,0 +1,5 @@
+# DEFENSOR WATCHER V.0.1
+
+## Objetivos
+
+this app is a personal agent that uses a skill of overwatcher, having 5 levels of threat aroung, same logic of the defcon scale but in defensive manners, that means the agent works in sync with the emergency channels taking care of the user's safety, orienting proactively to seek shelter and advance surveliance to keep them safe, likely the broadcast emergency system but personal one, giving instructions to the user in any case of any kind of emergency, and checking up them like a proactive overwatcher, even using their device sensors to orienting in any case of identify any threats around, likely using wifi signal as an active/passive radarr, night vision through the cam, vibration signals for proximity, infra-red sensor through the cam, and real-time translator as well other safety features any sensor of the phone would be useful in such cases, the defcon levels goes from 5 to 1, where 5 means it's safe, and 1 means critical emergency - highest level of threat.
