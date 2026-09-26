@@ -73,46 +73,70 @@ The UI should also expose:
 
 A separate **unknown / stale / unavailable** state is mandatory.
 
-## Experimental sensing
+## Reuse-first implementation
 
-Wi-Fi sensing is a real technical field and IEEE 802.11bf-2025 is an active WLAN-sensing standard.
+DEFENSOR WATCHER prioritizes existing SDKs, APIs, standards and libraries. Custom engineering is concentrated in orchestration, the readiness policy, the protocol harness, source/evidence modeling, UX and evals.
 
-That does **not** mean a normal Android application can universally turn every phone/router combination into a reliable radar.
+The current reusable stack includes Android AppFunctions / Android MCP, WebMCP, ADK Kotlin, Gemini Nano / ML Kit, LiteRT-LM / Gemma, llama.cpp, ML Kit speech/language/translation, sherpa-onnx, whisper.cpp, Espressif esp-csi / esp_wifi_sensing, Nordic BLE, Nearby Connections, CAP/WIS2 tooling, H3 and local vector stores.
 
-The current research path keeps sensing in a separate laboratory:
+See [SDK/API reuse catalog](notes/11-sdk-api-reuse-catalog-2026.md).
 
-```text
-compatible Wi-Fi/CSI companion hardware
-        -> local measurements/features
-        -> BLE/LAN
-        -> Android laboratory UI
-```
+## Agent interoperability
 
-The first acceptable experiment is deliberately narrow: distinguish a calibrated empty environment from probable movement. Experimental sensing must not independently create or promote a critical emergency state.
+The Defensor Tool Core exposes one typed capability contract through multiple adapters:
 
-UWB, Wi-Fi RTT and ordinary Android sensors may later provide specific context/ranging capabilities on compatible hardware; they are not generic threat detectors.
+~~~text
+Defensor Tool Core
+   +--> Android AppFunctions / Android MCP --> Gemini/system agents
+   +--> WebMCP ----------------------------> browser agents
+   +--> ADK local tools -------------------> offline LLM
+   +--> Remote MCP ------------------------> authorized remote agents
+~~~
 
-## AI policy
+Initial tools include active alerts, readiness state, emergency protocols, interpreter sessions, check-in preparation, device capabilities and sensing sessions.
 
-AI may assist with:
+See [local agent, Gemini and interpreter harness](notes/12-local-agent-gemini-translation-harness.md).
 
-- non-authoritative explanation;
-- auxiliary translation with the original retained;
-- searching reviewed offline protocols;
-- simulations and preparedness;
-- non-critical checklist personalization.
+## Offline protective agent
 
-AI must not be the sole authority for:
+The on-device harness can select the strongest local runtime available on the device:
 
-- existence of a threat;
-- official severity;
-- geographic applicability;
-- cancellation;
-- evacuation orders;
-- safe-route claims;
-- declaring that the user is safe.
+~~~text
+Gemini Nano / AICore / ML Kit
+        -> LiteRT-LM / Gemma
+        -> llama.cpp / GGUF
+        -> deterministic protocol engine
+~~~
 
-Critical state transitions should remain deterministic and auditable.
+Versioned emergency protocols, local retrieval/RAG, structured outputs and typed tools form the stable contract around the model runtime.
+
+## Real-time interpreter
+
+~~~text
+microphone
+ -> VAD
+ -> speech-to-text
+ -> language identification
+ -> translation
+ -> protocol-aware local agent
+ -> text-to-speech
+~~~
+
+Reusable engines under evaluation include ML Kit GenAI Speech Recognition, ML Kit Language Identification, ML Kit Translation, Android TextToSpeech, whisper.cpp and sherpa-onnx.
+
+## Wi-Fi sensing
+
+Wi-Fi sensing is a supported research and integration capability.
+
+The open P0 uses Espressif esp-csi and esp_wifi_sensing, which already provide CSI acquisition plus motion/presence demos with local training and diagnostics. The Android app receives typed sensing events over BLE or LAN.
+
+Commercial integration candidates include Cognitive Systems WiFi Motion, Aerial Technologies and Origin AI. acoAR is an emerging Android/iOS spatial-sensing SDK combining acoustic, IMU and a future Wi-Fi sensing path.
+
+UWB, Wi-Fi RTT, Wi-Fi Aware, BLE and Nearby Connections complement this layer for ranging, companions and local connectivity.
+
+## AI role
+
+Local and connected models provide language understanding, protocol retrieval, explanation, translation, multimodal context, tool selection and conversational mediation. Critical event facts retain their source/provenance and the Tool Core validates structured actions before execution.
 
 ## Current artifacts
 
@@ -123,11 +147,13 @@ Critical state transitions should remain deterministic and auditable.
 - [Consolidated development reassessment](notes/08-reavaliacao-consolidada-desenvolvimento.md)
 - [2026 international mobile-app landscape](notes/09-app-landscape-internacional-2026.md)
 - [App-first architecture and validation plan](notes/10-app-first-architecture-validation.md)
+- [SDK/API reuse catalog](notes/11-sdk-api-reuse-catalog-2026.md)
+- [Local agent, Gemini and interpreter harness](notes/12-local-agent-gemini-translation-harness.md)
 - [Navigable prototype](prototype/index.html)
 
-## Immediate engineering target
+## Parallel engineering targets
 
-Before adding any real sensor, prove one real source end-to-end:
+### Emergency-data path
 
 ```text
 official event
@@ -141,7 +167,27 @@ official event
 -> recovery after network loss
 ```
 
-That flow is the first technical proof of the product.
+That flow provides the first end-to-end emergency-data proof.
+
+### Offline-agent path
+
+~~~text
+protocol pack -> local retrieval -> local LLM -> structured action -> Defensor tool
+~~~
+
+### Interpreter path
+
+~~~text
+speech -> STT -> language ID -> translation -> TTS
+~~~
+
+### Sensing path
+
+~~~text
+esp_wifi_sensing -> motion/presence event -> BLE/LAN -> Defensor Tool Core
+~~~
+
+These spikes advance independently and converge behind the same Tool Core.
 
 ## Safety invariant
 
