@@ -1,0 +1,13 @@
+{
+  "profile_id": "BSX-PROFILE-A",
+  "configured_areas": ["São Vicente", "Santos"],
+  "dependencies": {
+    "mobility": ["bus-corridor-A", "bridge-link"],
+    "communications": ["mobile-data"],
+    "power": ["home-grid"],
+    "household_separation": ["cross-municipality"]
+  },
+  "transport_capabilities": ["bus", "walking"],
+  "meeting_points": ["MP-A", "MP-B"],
+  "offline_storage_consent": true
+}
