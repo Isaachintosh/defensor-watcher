@@ -93,3 +93,19 @@ Sprint ceremonies:
 - S10 Field Pilot / release candidate
 
 See `notes/18-sprint-roadmap-operational.md` and `notes/23-scrum-project-schema.md`.
+
+
+## Canonical context recovery
+
+Before proposing structural work, read:
+1. `docs/00-DEFENSOR-STACK-CANON.md`
+2. `docs/01-MEU-CEREBRO-INTEGRATION.md`
+3. `docs/02-AGENT-HARNESS.md`
+4. the relevant domain spec/note
+5. `docs/04-LIVE-WORKSTREAMS.md` for current ownership/status
+
+Machine-readable dependency/source maps:
+- `registry/cognitive-stack.v1.json`
+- `registry/research-source-manifest.v1.json`
+
+Do not reconstruct current state from chat memory when these artifacts exist.
