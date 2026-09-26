@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.2.0",
+  "status": "prototype",
+  "required_fields": [
+    "version","generated_at","geographic_scope","last_successful_sync",
+    "map_bundle","protocol_bundle","family_plan","meeting_points",
+    "essential_contacts","language_pack","cached_events","provenance_bundle"
+  ],
+  "freshness": {
+    "max_age_ms": "required_by_pack_generator",
+    "states": ["CURRENT","STALE","UNKNOWN"],
+    "rules": [
+      "Offline never upgrades freshness.",
+      "Missing/invalid generation time resolves to UNKNOWN.",
+      "Expired pack may remain readable but must be visibly STALE."
+    ]
+  },
+  "runtime_requirements": [
+    "core_access_without_remote_llm",
+    "restart_safe",
+    "source_and_provenance_preserved",
+    "human_readable_timestamp_and_age"
+  ],
+  "integrity": {
+    "manifest_hash": "PLANNED",
+    "signed_pack": "PLANNED",
+    "rule": "Do not claim cryptographic verification before implementation."
+  }
+}
