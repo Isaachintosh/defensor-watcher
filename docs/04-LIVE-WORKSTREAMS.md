@@ -26,6 +26,27 @@ Updated: 2026-09-26. Issues remain canonical.
 - #10 Sensor Gap Matrix — Ícaro / Davi.
 - #11 Adversarial reliability — Bruno / Samira.
 
+## Current engineering evidence
+
+- DEFENSOR Core Harness: **GREEN**
+- Latest validated run: https://github.com/Isaachintosh/defensor-watcher/actions/runs/36239020818
+- Executable modules now cover:
+  - CivilImpactEngine / MySituation
+  - provenance + freshness
+  - source-registry invariants and source health
+  - protocol selection / provenance gate
+  - offline pack validation + restart restore
+  - event ALERT/UPDATE/CANCEL lifecycle
+  - degraded location context
+- Prototype explicitly separates event severity from personal impact.
+
+## Current delivery status
+
+- #2–#11: **REVIEW / implementation continues**
+- #12: **OPEN** — Project board exists; field/item population remains.
+- #13: **BLOCKED** — `github-pages` environment rejects the research branch.
+- #14–#17: **DONE** — canonical stack/cognition/source/harness documentation reviewed and closed.
+
 ## Integration gates
 1. Pages must become green before #13 closes.
 2. Company-stack DEFENSOR overlay PR #9 remains experimental until runtime smoke passes.
