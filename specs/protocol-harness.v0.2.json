@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.2.0",
+  "status": "prototype",
+  "protocol_fields": [
+    "protocol_id","version","status","authority","jurisdiction",
+    "applicable_event_types","applicable_conditions","action",
+    "source_document","source_reference","valid_from","valid_until",
+    "language","original_text","offline_version","urgency"
+  ],
+  "selection_rules": [
+    "Only ACTIVE, source-bound protocols are eligible for authoritative guidance.",
+    "Expired/revoked protocols cannot be selected.",
+    "Jurisdiction and event applicability are deterministic filters.",
+    "Translation remains paired with source-language original.",
+    "LLMs may explain/translate selected content but cannot create authority or critical orders."
+  ],
+  "urgency_values": ["ADVISORY","PREPARE","IMMEDIATE"],
+  "offline_requirements": [
+    "selection_without_network",
+    "original_text_available",
+    "source_reference_available",
+    "version_and_validity_available"
+  ]
+}
