@@ -108,12 +108,13 @@ Mostrar posição real em mapa real e continuar funcionando após perda de rede.
 ## Sprint 2 — Source Registry and real situational layers
 
 ### Goal
-Substituir fixtures por eventos reais de pelo menos três domínios.
+Substituir fixtures por eventos reais de pelo menos três domínios e ativar a descoberta/ingestão inicial de imprensa local.
 
 ### Adapters target
 1. conflict/unrest: one structured source accessible under approved terms;
 2. natural hazard: CAP/GDACS/USGS or equivalent;
-3. infrastructure/operational source.
+3. infrastructure/operational source;
+4. local media: Atlas da Notícia (Brazil), Media Cloud and one direct publisher RSS/sitemap path.
 
 ### Entregas
 - ingestion workers;
@@ -124,7 +125,11 @@ Substituir fixtures por eventos reais de pelo menos três domínios.
 - geometry/H3 indexing;
 - event dedup;
 - contested claims model;
-- source health.
+- source health;
+- LocalMediaSource registry;
+- publisher geography separated from article/event geography;
+- direct RSS/Atom/news-sitemap ingestion;
+- local-news markers with provenance.
 
 ### Mockup operational
 - layer chips;
@@ -132,7 +137,7 @@ Substituir fixtures por eventos reais de pelo menos três domínios.
 - source registry screen.
 
 ### Gate
-At least 3 real source families visible in dev environment with source + timestamp + geometry.
+At least 3 real operational source families plus one local-media path visible in dev environment with source + timestamp + geometry.
 
 ---
 
@@ -150,6 +155,10 @@ Fazer o mapa e feed representarem situação viva.
 - stale/degraded/unknown;
 - event details;
 - source conflict display;
+- news dedup and syndication detection;
+- MediaCluster with distinct independent publishers;
+- official corroboration references for local-media clusters;
+- developing / multi-source / contested / corroborated media states;
 - notification pipeline;
 - command search over events/sources/actions.
 
@@ -161,7 +170,7 @@ Fazer o mapa e feed representarem situação viva.
 - command palette.
 
 ### Gate
-One end-to-end live event can enter, update, expire/cancel and persist offline.
+One end-to-end live event can enter, update, expire/cancel and persist offline; one local-media story cluster must deduplicate syndicated copies and preserve independent sources.
 
 ---
 
@@ -376,6 +385,8 @@ Pilot users complete:
 | infra layer | S2 |
 | weather/natural hazards | S2 |
 | source registry | S2 |
+| local media registry + direct feeds | S2 |
+| local media triangulation/clusters | S3 |
 | event detail/provenance | S3 |
 | feed/timeline | S3 |
 | readiness | S3 |
