@@ -211,3 +211,31 @@ The current interactive mockup is split into:
 - `prototype/app.js`
 
 It is dependency-free and runs with any static HTTP server. The UI is conflict/unrest/infrastructure/hazard/sensor aware, responsive, and supports light/dark/system themes.
+
+
+## Situation-driven core — 2026-09-26
+
+The home projection is now **MySituation**: a deterministic synthesis of source events, civil impact, personal readiness, sourced guidance, provenance, freshness and offline state.
+
+Core pipeline:
+
+```text
+Source -> Observation -> EventCandidate -> Event
+       -> CivilImpactAssessment -> GuidanceSet -> MySituation
+```
+
+Safety semantics are explicit: `STALE != SAFE`, `UNKNOWN != NORMAL`, `OFFLINE != NO EVENT`, and event severity is not the same thing as personal impact.
+
+Implementation artifacts:
+- [Situation-driven core decision](notes/20-situation-driven-core.md)
+- [Agent taskboard](notes/21-agent-taskboard.md)
+- [Domain contracts](specs/domain-contracts.v0.json)
+- [Source registry](specs/source-registry.v0.json)
+- [Readiness profile](specs/readiness-profile.v0.json)
+- [Offline readiness pack](specs/offline-readiness-pack.v0.json)
+- [Protocol harness](specs/protocol-harness.v0.json)
+- [Sensor gap matrix](specs/sensor-gap-matrix.v0.json)
+- [Baixada stress scenario BSX-001](testdata/scenarios/bsx-001.json)
+- [Adversarial reliability suite](testdata/adversarial-v0.json)
+
+Tracked work packages: #2 through #11.
