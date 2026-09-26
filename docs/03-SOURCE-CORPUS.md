@@ -15,7 +15,9 @@ Snapshot taken from the core research/architecture notes on 2026-09-26:
 
 Inclusion means a source materially informed research, reuse, benchmarking or validation. It does **not** mean production dependency or SLA.
 
-Detailed research remains in `notes/00-...21-...`. The machine-readable summary is `registry/research-source-manifest.v1.json`.
+Detailed research remains in `notes/00-...21-...`. Machine-readable artifacts:
+- `registry/research-source-index.v1.json` — all 193 unique URLs with category and originating research documents;
+- `registry/research-source-manifest.v1.json` — compact source-family/repository summary.
 
 ## Emergency authorities / standards
 
