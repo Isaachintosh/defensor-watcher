@@ -149,6 +149,8 @@ Local and connected models provide language understanding, protocol retrieval, e
 - [App-first architecture and validation plan](notes/10-app-first-architecture-validation.md)
 - [SDK/API reuse catalog](notes/11-sdk-api-reuse-catalog-2026.md)
 - [Local agent, Gemini and interpreter harness](notes/12-local-agent-gemini-translation-harness.md)
+- [Deep radar + offline speech SDK scan](notes/13-deep-radar-speech-sdk-scan.md)
+- [Global emergency APIs, OSS platforms and agent skills](notes/14-global-emergency-apis-oss-skills.md)
 - [Navigable prototype](prototype/index.html)
 
 ## Parallel engineering targets
