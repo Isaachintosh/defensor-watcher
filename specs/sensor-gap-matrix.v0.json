@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "status": "prototype",
+  "decision_chain": [
+    "DEFINE_DATA_GAP",
+    "CHECK_EXISTING_SOURCE",
+    "IF_UNFILLED_EVALUATE_LOCAL_SENSOR",
+    "VALIDATE_CAPABILITY_AND_CALIBRATION",
+    "KEEP_EVIDENCE_CLASS_EXPERIMENTAL_UNTIL_PROVEN"
+  ],
+  "entries": [
+    {
+      "gap_id": "local-presence-lab",
+      "question": "Can a calibrated local laboratory detect a physical signal change useful as auxiliary context?",
+      "existing_source_alternative": "none_for_local_physical_signal",
+      "sensor_candidate": "ESP32 CSI / dedicated ranging companion",
+      "maturity": "EXPERIMENTAL",
+      "critical_state_promotion_allowed": false,
+      "prohibited_claims": [
+        "identity",
+        "intent",
+        "weapon_detection",
+        "universal_through-wall_detection",
+        "safe_area_from_absence"
+      ]
+    }
+  ]
+}
