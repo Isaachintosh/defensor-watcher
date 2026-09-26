@@ -5,14 +5,14 @@ Updated: 2026-09-26. Issues remain canonical.
 ## Governance / delivery
 - #12 Scrum harness + GitHub Project — **Luna** — active.
 - #13 Pages recovery — **Davi / Bruno / Nina** — active; Pages source enabled, workflow still failing before useful deploy steps.
-- #17 harness documentation — **Luna / Helena / Davi / Bruno** — canonical docs committed.
+- #17 harness documentation — **DONE** — reviewed canonical docs.
 
 ## Cognitive / stack
-- #14 meu-cerebro registration — **Rafael / Davi / Luna / Bruno** — registry + integration canon committed.
-- #15 full stack canon — **Davi / Luca / Caio / Rafael** — architecture canon committed.
+- #14 meu-cerebro registration — **DONE** — canonical dependency + registry reviewed.
+- #15 full stack canon — **DONE** — architecture canon reviewed.
 
 ## Evidence / sources
-- #16 research/source corpus — **Rafael / Sofia / Eleanor / Bruno** — baseline manifest committed.
+- #16 research/source corpus — **DONE** — full 193-URL provenance index reviewed.
 
 ## Product/domain
 - #2 MySituation + CivilImpactEngine — Davi / Helena.
