@@ -65,8 +65,8 @@ The GitHub Project is the operational board. Repository issues remain the canoni
 | #9 BSX-001 stress harness | Cross-sprint validation | S1/S3 | Caio / Marina | Bruno |
 | #10 Sensor Gap Matrix | Local Intelligence | S8 | Ícaro | Davi / Bruno |
 | #11 Adversarial reliability | Field Beta / cross-sprint | S9 + continuous | Bruno / Samira | Davi |
-| #undefined Pages recovery | Foundation / Delivery | S0 | Davi | Bruno / Nina |
-| #undefined Scrum harness | Governance | continuous | Luna | Helena / Davi |
+| #13 Pages recovery | Foundation / Delivery | S0 | Davi | Bruno / Nina |
+| #12 Scrum harness | Governance | continuous | Luna | Helena / Davi |
 
 ## Required views
 
