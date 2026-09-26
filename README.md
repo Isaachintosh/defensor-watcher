@@ -268,3 +268,18 @@ The server must expose the entire `prototype/` directory, not only the HTML file
 ## GitHub Pages
 
 `.github/workflows/pages.yml` publishes **only** `prototype/` as the Pages artifact. Research notes, specs and test data are not part of the public site artifact.
+
+
+## Canonical project documentation
+
+For maintainers, Codex/Cursor and project agents:
+
+- [Stack canon](docs/00-DEFENSOR-STACK-CANON.md)
+- [Cérebro INEVITA / meu-cerebro integration](docs/01-MEU-CEREBRO-INTEGRATION.md)
+- [Multi-agent harness](docs/02-AGENT-HARNESS.md)
+- [Research/source corpus](docs/03-SOURCE-CORPUS.md)
+- [Live workstreams](docs/04-LIVE-WORKSTREAMS.md)
+- [Cognitive stack registry](registry/cognitive-stack.v1.json)
+- [Research source manifest](registry/research-source-manifest.v1.json)
+
+The OdooCast company-agent stack is a development/orchestration harness. It is deliberately separated from the end-user DEFENSOR runtime.
