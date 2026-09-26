@@ -128,12 +128,12 @@ const categoryMeta = {
 };
 
 const protocols = [
-  ["Conflito próximo", "Abrigo, mobilidade, comunicação e check-in em cenário de violência próxima.", "v0.3 · demo"],
-  ["Evacuação / curfew", "Como interpretar instruções oficiais, preparar saída e confirmar destino.", "v0.2 · demo"],
-  ["Falha de energia", "Prioridades de bateria, iluminação, refrigeração essencial e comunicação.", "v0.4 · demo"],
-  ["Comunicação degradada", "Rotas offline, check-in manual e redução de dependência de rede.", "v0.3 · demo"],
-  ["Alagamento", "Evitar travessias, reconhecer rotas inseguras e preparar deslocamento.", "v0.5 · demo"],
-  ["Sismo", "Proteção durante o evento, checagem pós-evento e riscos secundários.", "v0.2 · demo"]
+  { id: "conflict-near", title: "Conflito próximo", summary: "Abrigo, mobilidade, comunicação e check-in em cenário de violência próxima.", version: "v0.3 · demo", source: "DEMO · Protocol Harness #7", steps: ["Verifique a orientação oficial aplicável à sua área antes de agir.", "Evite deslocamento por área com bloqueio confirmado; mantenha alternativa offline.", "Use check-in local para preparar uma mensagem sem presumir conectividade."] },
+  { id: "evacuation", title: "Evacuação / curfew", summary: "Como interpretar instruções oficiais, preparar saída e confirmar destino.", version: "v0.2 · demo", source: "DEMO · Protocol Harness #7", steps: ["Confirme autoridade, jurisdição, validade e horário da instrução.", "Revise destino, mobilidade e dependências do seu plano local.", "Mantenha cópia offline da instrução e do ponto de encontro."] },
+  { id: "power", title: "Falha de energia", summary: "Prioridades de bateria, iluminação, refrigeração essencial e comunicação.", version: "v0.4 · demo", source: "DEMO · Protocol Harness #7", steps: ["Preserve energia para comunicação e necessidades essenciais.", "Consulte o estado operacional disponível; ausência de atualização não significa normalidade.", "Use o pacote offline e marque informação antiga como STALE."] },
+  { id: "degraded-comms", title: "Comunicação degradada", summary: "Rotas offline, check-in manual e redução de dependência de rede.", version: "v0.3 · demo", source: "DEMO · Protocol Harness #7", steps: ["Abra contatos, mapas e plano já armazenados localmente.", "Prepare check-in sem marcar como enviado até existir confirmação.", "Trate OFFLINE como estado de conectividade, não como ausência de evento."] },
+  { id: "flood", title: "Alagamento", summary: "Evitar travessias, reconhecer rotas inseguras e preparar deslocamento.", version: "v0.5 · demo", source: "DEMO · Protocol Harness #7", steps: ["Consulte alerta oficial aplicável à sua localização.", "Não trate rota desconhecida como segura; use apenas alternativa confirmada.", "Mantenha plano offline e informação de frescor visíveis."] },
+  { id: "seismic", title: "Sismo", summary: "Proteção durante o evento, checagem pós-evento e riscos secundários.", version: "v0.2 · demo", source: "DEMO · Protocol Harness #7", steps: ["Consulte orientação oficial e científica aplicável à jurisdição.", "Após o evento, considere riscos secundários e infraestrutura degradada.", "Não converta silêncio de fontes em estado SAFE/NORMAL."] }
 ];
 
 const sources = [
@@ -261,7 +261,7 @@ function detailMarkup(event, mobile = false) {
 function bindDetailActions(container) {
   container.querySelector("[data-close-detail]")?.addEventListener("click", clearSelection);
   container.querySelector("[data-action='protocol']")?.addEventListener("click", () => { closeMobileSheet(); go("protocols"); });
-  container.querySelector("[data-action='checkin']")?.addEventListener("click", () => alert("Mockup: abriria a prévia de check-in. Nada foi enviado."));
+  container.querySelector("[data-action='checkin']")?.addEventListener("click", () => openCheckinPreview(selectedEvent));
 }
 
 function selectEvent(id) {
@@ -317,9 +317,54 @@ function renderCoverage() {
 }
 
 function renderProtocols() {
-  protocolGrid.innerHTML = protocols.map(([title, text, version]) =>
-    '<article class="protocol-card"><small>PROTOCOLO</small><h3>' + title + '</h3><p>' + text + '</p><footer><span>' + version + '</span><button class="text-button">Abrir ' + icon("i-chevron") + '</button></footer></article>'
+  protocolGrid.innerHTML = protocols.map(protocol =>
+    '<article class="protocol-card" data-protocol-card="' + protocol.id + '"><small>PROTOCOLO · DEMO</small><h3>' + protocol.title + '</h3><p>' + protocol.summary + '</p>' +
+    '<div data-protocol-detail hidden style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)"><p class="eyebrow">ORIGEM / STATUS</p><p><strong>' + protocol.source + '</strong> · ' + protocol.version + '</p><ol style="padding-left:18px;color:var(--ink-2);font-size:12px;line-height:1.55">' +
+    protocol.steps.map(step => '<li style="margin:6px 0">' + step + '</li>').join("") +
+    '</ol><p style="font-size:11px;color:var(--ink-3)">Orientação demonstrativa e versionada. A fonte/jurisdição real deve ser validada antes de uso operacional.</p></div>' +
+    '<footer><span>' + protocol.version + '</span><button class="text-button" data-open-protocol="' + protocol.id + '" aria-expanded="false">Abrir ' + icon("i-chevron") + '</button></footer></article>'
   ).join("");
+  protocolGrid.querySelectorAll("[data-open-protocol]").forEach(button => button.addEventListener("click", () => {
+    const card = button.closest("[data-protocol-card]");
+    const detail = card.querySelector("[data-protocol-detail]");
+    const opening = detail.hidden;
+    protocolGrid.querySelectorAll("[data-protocol-detail]").forEach(node => { node.hidden = true; });
+    protocolGrid.querySelectorAll("[data-open-protocol]").forEach(node => { node.setAttribute("aria-expanded", "false"); node.firstChild && (node.firstChild.textContent = "Abrir "); });
+    detail.hidden = !opening;
+    button.setAttribute("aria-expanded", String(opening));
+    if (opening) { button.firstChild && (button.firstChild.textContent = "Fechar "); detail.scrollIntoView({ block: "nearest", behavior: "smooth" }); }
+  }));
+}
+
+function openCheckinPreview(event) {
+  document.querySelector("#checkinPreview")?.remove();
+  const overlay = document.createElement("div");
+  overlay.id = "checkinPreview";
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-modal", "true");
+  overlay.setAttribute("aria-label", "Prévia de check-in sintético");
+  overlay.style.cssText = "position:fixed;inset:0;z-index:120;background:rgba(6,8,10,.55);display:grid;place-items:center;padding:20px;backdrop-filter:blur(6px)";
+  overlay.innerHTML =
+    '<section style="width:min(560px,100%);background:var(--elevated);border:1px solid var(--line-strong);border-radius:16px;padding:20px;box-shadow:var(--shadow)">' +
+    '<div class="detail-close-row"><span class="eyebrow">CHECK-IN · DEMO LOCAL</span><button class="icon-button" data-close-checkin aria-label="Fechar">' + icon("i-close") + '</button></div>' +
+    '<h2 style="margin:0 0 8px">Preparar check-in</h2><p style="color:var(--ink-2);font-size:13px;line-height:1.5">Associado a <strong>' + (event?.title || "situação atual") + '</strong>. Esta prévia é sintética e <strong>nada foi transmitido</strong>.</p>' +
+    '<div class="settings-group"><div><strong>Estado local</strong><span>Escolha apenas para demonstrar a mudança de estado.</span></div><div class="segmented"><button data-checkin-state="OK">Estou bem</button><button data-checkin-state="HELP">Preciso de contato</button></div></div>' +
+    '<p id="checkinStateText" class="state-pill">RASCUNHO · NÃO ENVIADO</p>' +
+    '<div class="detail-actions"><button class="secondary-button" data-close-checkin>Cancelar</button><button class="primary-button" data-save-checkin>Salvar localmente</button></div>' +
+    '</section>';
+  document.body.appendChild(overlay);
+  let state = "RASCUNHO";
+  overlay.querySelectorAll("[data-checkin-state]").forEach(button => button.addEventListener("click", () => {
+    state = button.dataset.checkinState;
+    overlay.querySelectorAll("[data-checkin-state]").forEach(node => node.classList.toggle("is-active", node === button));
+    overlay.querySelector("#checkinStateText").textContent = state + " · NÃO ENVIADO";
+  }));
+  overlay.querySelectorAll("[data-close-checkin]").forEach(button => button.addEventListener("click", () => overlay.remove()));
+  overlay.querySelector("[data-save-checkin]")?.addEventListener("click", () => {
+    overlay.querySelector("#checkinStateText").textContent = state + " · SALVO LOCALMENTE · NÃO ENVIADO";
+  });
+  overlay.addEventListener("click", e => { if (e.target === overlay) overlay.remove(); });
+  overlay.querySelector("[data-checkin-state]")?.focus();
 }
 
 function renderSources() {
@@ -406,7 +451,7 @@ document.addEventListener("keydown", event => {
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
     event.preventDefault(); openCommandPalette();
   }
-  if (event.key === "Escape") { closeCommandPalette(); closeMobileSheet(); }
+  if (event.key === "Escape") { closeCommandPalette(); closeMobileSheet(); document.querySelector("#checkinPreview")?.remove(); }
   if (event.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) {
     event.preventDefault(); openCommandPalette();
   }
