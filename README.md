@@ -151,6 +151,7 @@ Local and connected models provide language understanding, protocol retrieval, e
 - [Local agent, Gemini and interpreter harness](notes/12-local-agent-gemini-translation-harness.md)
 - [Deep radar + offline speech SDK scan](notes/13-deep-radar-speech-sdk-scan.md)
 - [Global emergency APIs, OSS platforms and agent skills](notes/14-global-emergency-apis-oss-skills.md)
+- [Conflict intelligence + command-center UX redesign](notes/15-conflict-intelligence-ui-redesign.md)
 - [Navigable prototype](prototype/index.html)
 
 ## Parallel engineering targets
@@ -196,3 +197,13 @@ These spikes advance independently and converge behind the same Tool Core.
 **No data is not evidence of no danger.**
 
 A missing, delayed or unavailable source must produce an explicit degraded/unknown state, never a “safe” conclusion.
+
+## SPA situational-awareness mockup
+
+The current interactive mockup is split into:
+
+- `prototype/index.html`
+- `prototype/styles.css`
+- `prototype/app.js`
+
+It is dependency-free and runs with any static HTTP server. The UI is conflict/unrest/infrastructure/hazard/sensor aware, responsive, and supports light/dark/system themes.
