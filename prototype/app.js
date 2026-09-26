@@ -71,6 +71,19 @@ const events = [
   }
 ];
 
+
+const mySituation = {
+  state: "PREPARAÇÃO",
+  whatChanged: "Cenário sintético BSX-001: chuva severa, conectividade intermitente e uma opção de mobilidade indisponível.",
+  impact: "Seu plano depende de comunicação e deslocamento; o protótipo mantém alternativas e marca dados vencidos explicitamente.",
+  guidance: "Consulte somente orientação vinculada a fonte/protocolo e mantenha o plano offline acessível.",
+  plan: "Ponto de encontro e contatos essenciais disponíveis no pacote local.",
+  provenance: "DEMO / dados sintéticos",
+  lastSync: "14:32",
+  informationAge: "2 min",
+  offlinePack: "disponível"
+};
+
 const layers = [
   { id: "conflict", label: "Conflito", count: 1 },
   { id: "unrest", label: "Unrest", count: 1 },
@@ -143,6 +156,7 @@ const mobileEventDetail = document.querySelector("#mobileEventDetail");
 const commandBackdrop = document.querySelector("#commandBackdrop");
 const commandInput = document.querySelector("#commandInput");
 const commandResults = document.querySelector("#commandResults");
+const mySituationSummary = document.querySelector("#mySituationSummary");
 
 let activeLayers = new Set(layers.map(x => x.id));
 let selectedEvent = null;
@@ -386,6 +400,23 @@ window.addEventListener("resize", () => {
   if (!matchMedia("(max-width: 780px)").matches) closeMobileSheet();
 });
 
+
+function renderMySituation() {
+  if (!mySituationSummary) return;
+  mySituationSummary.innerHTML =
+    '<div class="summary-kicker"><span class="pulse"></span> ' + mySituation.state + '</div>' +
+    '<p><strong>O que mudou:</strong> ' + mySituation.whatChanged + '</p>' +
+    '<p><strong>Como isso me afeta:</strong> ' + mySituation.impact + '</p>' +
+    '<p><strong>O que fazer:</strong> ' + mySituation.guidance + '</p>' +
+    '<p><strong>Meu plano:</strong> ' + mySituation.plan + '</p>' +
+    '<p style="font-size:11px"><strong>Origem:</strong> ' + mySituation.provenance +
+    ' · sync ' + mySituation.lastSync + ' · idade ' + mySituation.informationAge +
+    ' · offline ' + mySituation.offlinePack + '</p>' +
+    '<button class="text-button" data-route="feed">Abrir evidências e eventos ' + icon("i-arrow") + '</button>';
+  mySituationSummary.querySelector("[data-route='feed']")?.addEventListener("click", () => go("feed"));
+}
+
+renderMySituation();
 renderLayers();
 renderMarkers();
 renderTimeline();
