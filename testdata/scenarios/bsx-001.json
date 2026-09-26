@@ -1,0 +1,35 @@
+{
+  "scenario_id": "BSX-001",
+  "title": "Baixada Santista progressive service degradation",
+  "geography": [
+    "São Vicente",
+    "Santos",
+    "Guarujá"
+  ],
+  "purpose": "Validate civil resilience under compound degradation without modeling hostile tactics.",
+  "initial_conditions": {
+    "user_away_from_home": true,
+    "household_member_in_other_municipality": true,
+    "severe_rain": true,
+    "mobile_connectivity": "INTERMITTENT",
+    "mobility_option_unavailable": true,
+    "home_power": "OUT",
+    "internet_eventually": "UNAVAILABLE"
+  },
+  "expected_invariants": [
+    "Preserve the last consistent ReadinessPack.",
+    "Expose STALE/UNKNOWN when freshness can no longer be guaranteed.",
+    "Retain household plan, meeting points and sourced protocols offline.",
+    "Do not require a remote LLM for core access.",
+    "Do not infer safety from loss of incoming events.",
+    "Do not invent a safe route."
+  ],
+  "expected_sequence": [
+    "DETECT_RELEVANT_CHANGE",
+    "ASSESS_PERSONAL_IMPACT",
+    "SYNC_WHEN_POSSIBLE",
+    "PRESERVE_OFFLINE_PACK",
+    "MARK_INFORMATION_AGE",
+    "KEEP_SOURCE_PROVENANCE"
+  ]
+}
