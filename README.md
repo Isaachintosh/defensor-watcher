@@ -280,6 +280,7 @@ For maintainers, Codex/Cursor and project agents:
 - [Research/source corpus](docs/03-SOURCE-CORPUS.md)
 - [Live workstreams](docs/04-LIVE-WORKSTREAMS.md)
 - [Cognitive stack registry](registry/cognitive-stack.v1.json)
+- [Full research source index](registry/research-source-index.v1.json)
 - [Research source manifest](registry/research-source-manifest.v1.json)
 
 The OdooCast company-agent stack is a development/orchestration harness. It is deliberately separated from the end-user DEFENSOR runtime.
