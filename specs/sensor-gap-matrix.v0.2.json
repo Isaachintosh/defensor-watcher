@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.2.0",
+  "status": "prototype",
+  "decision_chain": [
+    "DEFINE_DATA_GAP",
+    "CHECK_EXISTING_SOURCE",
+    "CHECK_DEVICE_NATIVE_CAPABILITY",
+    "IF_UNFILLED_EVALUATE_LOCAL_SENSOR",
+    "VALIDATE_CAPABILITY_LIMITS_AND_CALIBRATION",
+    "KEEP_EVIDENCE_CLASS_EXPERIMENTAL_UNTIL_PROVEN"
+  ],
+  "entries": [
+    {
+      "gap_id": "local-presence-lab",
+      "question": "Can a calibrated local laboratory detect a physical signal change useful only as auxiliary context?",
+      "existing_source_alternative": "none_for_local_physical_signal",
+      "device_native_alternative": "evaluate Wi-Fi RTT/UWB when hardware exposes supported ranging",
+      "sensor_candidates": ["ESP32 CSI","dedicated ranging/radar companion"],
+      "maturity": "EXPERIMENTAL",
+      "critical_state_promotion_allowed": false,
+      "requires_calibration": true,
+      "prohibited_claims": [
+        "identity","intent","weapon_detection",
+        "universal_through-wall_detection","safe_area_from_absence"
+      ]
+    },
+    {
+      "gap_id": "local-connectivity-observability",
+      "question": "Is network degradation affecting the user's ability to receive fresh information?",
+      "existing_source_alternative": "device connectivity APIs plus known source health",
+      "device_native_alternative": "preferred",
+      "sensor_candidates": [],
+      "maturity": "NO_EXTRA_SENSOR_REQUIRED",
+      "critical_state_promotion_allowed": false
+    },
+    {
+      "gap_id": "official-hazard-awareness",
+      "question": "Is an official hazard or warning active in the user's area?",
+      "existing_source_alternative": "official/scientific source registry",
+      "device_native_alternative": "official Cell Broadcast remains redundant channel",
+      "sensor_candidates": [],
+      "maturity": "EXTERNAL_SOURCE_FIRST",
+      "critical_state_promotion_allowed": false
+    }
+  ],
+  "rules": [
+    "Hardware is justified only by an explicit unfilled information gap.",
+    "Experimental sensing cannot independently promote authoritative critical state.",
+    "Negative sensor observation never proves an area safe."
+  ]
+}

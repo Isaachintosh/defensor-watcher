@@ -1,0 +1,20 @@
+{
+  "suite": "DEFENSOR adversarial reliability v1",
+  "version": "1.0.0",
+  "cases": [
+    {"id":"ADV-001","stimulus":"stale data","expected":["freshness=STALE","situation_state!=NORMAL"]},
+    {"id":"ADV-002","stimulus":"conflicting sources","expected":["provenance=CONFLICTING","conflict remains explicit"]},
+    {"id":"ADV-003","stimulus":"official correction/retraction","expected":["new canonical state supersedes display","history remains auditable"]},
+    {"id":"ADV-004","stimulus":"network lost before first sync","expected":["situation_state=UNKNOWN","no fabricated current state"]},
+    {"id":"ADV-005","stimulus":"network lost after alert","expected":["last known state retained","information age visible"]},
+    {"id":"ADV-006","stimulus":"GPS unavailable","expected":["configured areas remain usable","location-only result may become UNKNOWN"]},
+    {"id":"ADV-007","stimulus":"same event, different readiness profiles","expected":["personal impacts differ","event severity remains unchanged"]},
+    {"id":"ADV-008","stimulus":"household separated","expected":["family plan available offline"]},
+    {"id":"ADV-009","stimulus":"protocol expired","expected":["expired protocol not selected"]},
+    {"id":"ADV-010","stimulus":"experimental sensor signal only","expected":["no authoritative promotion","no ACTION state solely from sensor"]},
+    {"id":"ADV-011","stimulus":"source outage","expected":["source health degraded","silence!=safety"]},
+    {"id":"ADV-012","stimulus":"offline restart","expected":["last valid pack loads","freshness explicit"]},
+    {"id":"ADV-013","stimulus":"guidance without source reference","expected":["guidance rejected"]},
+    {"id":"ADV-014","stimulus":"empty event set","expected":["situation_state=UNKNOWN unless positive current baseline is evidenced"]}
+  ]
+}

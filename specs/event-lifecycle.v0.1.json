@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1.0",
+  "status": "prototype",
+  "message_types": ["ALERT","UPDATE","CANCEL"],
+  "required_fields": ["logical_event_id","message_type","sequence"],
+  "rules": [
+    "Higher sequence wins within the same logical event.",
+    "Duplicate or older messages are ignored deterministically.",
+    "CANCEL is terminal in v0.1.",
+    "UPDATE cannot silently reactivate a cancelled event.",
+    "History preserves message type, sequence, time and source reference."
+  ],
+  "future_work": [
+    "Explicit reopen/new-event semantics require a separate logical event or a reviewed v0.2 rule."
+  ]
+}

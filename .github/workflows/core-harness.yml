@@ -1,0 +1,45 @@
+name: DEFENSOR Core Harness
+
+on:
+  push:
+    branches:
+      - main
+      - research/app-first-landscape-2026-09-25
+    paths:
+      - "src/core/**"
+      - "tests/**"
+      - "testdata/**"
+      - "specs/**"
+      - ".github/workflows/core-harness.yml"
+  pull_request:
+    paths:
+      - "src/core/**"
+      - "tests/**"
+      - "testdata/**"
+      - "specs/**"
+      - ".github/workflows/core-harness.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Run deterministic harnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          for test_file in tests/*-harness.mjs; do
+            echo "==> $test_file"
+            node "$test_file"
+          done

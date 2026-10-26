@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-26",
+  "repositories": {
+    "defensor": {
+      "name": "Isaachintosh/defensor-watcher",
+      "visibility": "public",
+      "role": "DEFENSOR application, research, contracts, prototype and delivery governance"
+    },
+    "canonical_brain": {
+      "name": "gabrielzucco/cerebro-inevita",
+      "visibility": "public",
+      "role": "canonical Cérebro INEVITA upstream",
+      "entrypoints": [
+        "COMECE-AQUI.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "skills/_CATALOGO.md",
+        ".agents/skills/<skill>/SKILL.md"
+      ]
+    },
+    "company_stack": {
+      "name": "Isaachintosh/openclaw-frellmapi-stack-agents",
+      "visibility": "private",
+      "role": "OdooCast multi-agent development/orchestration stack",
+      "brain_submodule": {
+        "path": "meu-cerebro",
+        "url": "https://github.com/gabrielzucco/cerebro-inevita.git"
+      },
+      "brain_mount": "/app/meu-cerebro",
+      "current_runtime": [
+        "Claw3D",
+        "OpenClaw Gateway",
+        "FreeLLMAPI",
+        "Cérebro",
+        "Arquivologista"
+      ]
+    }
+  },
+  "defensor_overlay": {
+    "repository": "Isaachintosh/openclaw-frellmapi-stack-agents",
+    "branch": "feature/defensor-cerebro-skills-2026-09-25",
+    "pull_request": 9,
+    "path": "cerebro-skills/",
+    "status": "EXPERIMENTAL",
+    "runtime_smoke": "pending per PR documentation",
+    "skills": [
+      "defensor-reuse-scout",
+      "defensor-source-registry",
+      "defensor-situational-watch",
+      "defensor-sensor-capability",
+      "defensor-offline-interpreter",
+      "defensor-protocol-harness",
+      "worldmonitor-intelligence",
+      "defensor-conflict-intelligence",
+      "defensor-command-center-ux",
+      "defensor-ceo-product-strategy",
+      "defensor-cto-delivery-architecture",
+      "defensor-cmo-gtm",
+      "defensor-product-owner",
+      "defensor-map-location-offline",
+      "defensor-sprint-orchestrator",
+      "defensor-local-media-intelligence"
+    ]
+  },
+  "defensor_local_harness": {
+    "scrum_skill": "skills/defensor-scrum-master/SKILL.md",
+    "project_board": "https://github.com/users/Isaachintosh/projects/6/views/1",
+    "governance": "AGENTS.md"
+  },
+  "status_semantics": [
+    "CURRENT",
+    "EXPERIMENTAL",
+    "PLANNED",
+    "UNKNOWN"
+  ],
+  "decisions": [
+    {
+      "id": "brain-physical-location",
+      "decision": "Do not add a second meu-cerebro submodule to defensor-watcher without an ADR.",
+      "rationale": "Avoid duplicate version pins and source-of-truth drift.",
+      "status": "CURRENT"
+    },
+    {
+      "id": "hermes-migration",
+      "decision": "Hermes migration is not CURRENT in the inspected company-stack repository.",
+      "status": "PLANNED"
+    }
+  ]
+}

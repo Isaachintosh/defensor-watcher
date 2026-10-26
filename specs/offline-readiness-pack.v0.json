@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "status": "prototype",
+  "required_fields": [
+    "version",
+    "generated_at",
+    "geographic_scope",
+    "last_successful_sync",
+    "information_age",
+    "map_bundle",
+    "protocol_bundle",
+    "family_plan",
+    "meeting_points",
+    "essential_contacts",
+    "language_pack",
+    "cached_events",
+    "provenance_bundle"
+  ],
+  "freshness_policy": {
+    "rule": "Cached state never upgrades to current merely because network is unavailable.",
+    "expired_state": "STALE",
+    "no_sync_state": "UNKNOWN"
+  },
+  "runtime_requirements": [
+    "core_access_without_remote_llm",
+    "restart_safe",
+    "source_and_provenance_preserved",
+    "human_readable_timestamp_and_age"
+  ]
+}

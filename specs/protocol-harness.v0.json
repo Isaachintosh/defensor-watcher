@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "status": "prototype",
+  "protocol_fields": [
+    "protocol_id",
+    "version",
+    "authority",
+    "jurisdiction",
+    "applicable_event_types",
+    "applicable_conditions",
+    "action",
+    "source_document",
+    "source_reference",
+    "valid_from",
+    "valid_until",
+    "language",
+    "original_text",
+    "offline_version"
+  ],
+  "selection_rules": [
+    "Only active, source-bound protocols are eligible for authoritative guidance.",
+    "Expired or revoked protocols cannot be selected as active.",
+    "Translations remain paired with the source-language original.",
+    "LLMs may explain or translate retrieved protocol content but cannot create authority or critical orders."
+  ]
+}

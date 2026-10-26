@@ -1,11 +1,238 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Defcon Watcher — Mockup</title><style>
-:root{font-family:system-ui,sans-serif;color-scheme:dark;--bg:#080c12;--card:#111923;--line:#29374a;--text:#f5f7fa;--muted:#a9b5c5;--yellow:#ffc857;--blue:#9cddff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#22324b,#080c12 60%);color:var(--text);display:grid;place-items:center;min-height:100vh}button,select,input{font:inherit}.phone{position:relative;width:min(100%,430px);min-height:100vh;background:var(--bg);padding-bottom:78px;overflow:hidden}.top{height:62px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-weight:900;letter-spacing:.08em}.icon,.back{border:0;background:none;color:var(--text);padding:12px}.screen{display:none;padding:20px}.screen.active{display:block}h1{font-size:2rem;margin:.25rem 0 1rem}h2{font-size:1.08rem}p,li{color:var(--muted);line-height:1.5}.eyebrow{font-size:.72rem;color:var(--yellow);font-weight:900;letter-spacing:.08em}.status{border-left:6px solid var(--yellow);background:linear-gradient(110deg,#272216,var(--card));padding:16px;border-radius:0 16px 16px 0}.fresh,.card,.preview,.result{border:1px solid var(--line);background:var(--card);padding:15px;border-radius:14px;margin:14px 0}.fresh{display:grid;font-size:.82rem}.tag{display:inline-block;font-size:.68rem;font-weight:900;border-radius:30px;padding:5px 9px;background:#4a3911;color:#ffe39a}.experimental{background:#17364c;color:var(--blue)}.primary,.secondary,.danger{width:100%;min-height:48px;border-radius:12px;padding:12px;margin-top:10px;font-weight:800}.primary{border:0;background:var(--yellow);color:#171208}.secondary{border:1px solid #53677f;background:#17212e;color:var(--text)}.danger{border:1px solid #91424a;background:#2c171c;color:#ffb7b7}.checkin{display:flex;gap:12px;text-align:left}.steps{list-style:none;padding:0}.steps li{display:flex;gap:12px;margin:18px 0}.steps span{flex:0 0 34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--yellow);color:#171208;font-weight:900}.steps p{margin:.2rem 0}fieldset{display:grid;gap:12px;border:1px solid var(--line);border-radius:12px;padding:15px}label{display:flex;gap:10px;align-items:center;margin:14px 0}input{width:20px;height:20px;accent-color:var(--yellow)}nav{position:absolute;bottom:0;left:0;right:0;height:70px;display:grid;grid-template-columns:repeat(3,1fr);background:#0d141e;border-top:1px solid var(--line)}nav button{border:0;background:none;color:var(--muted)}nav .on{color:var(--yellow)}.toast{position:absolute;left:20px;right:20px;bottom:80px;padding:12px;background:#eef3f8;color:#111827;border-radius:10px;transform:translateY(180%);transition:.2s}.toast.show{transform:none}@media(min-width:600px){.phone{min-height:820px;border:1px solid #34445a;border-radius:28px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body><main class="phone"><header class="top"><span>DEFCON WATCHER</span><button class="icon" data-go="settings" aria-label="Configurações">⚙</button></header>
-<section id="home" class="screen active"><div class="status"><p class="eyebrow">NÍVEL DE PRONTIDÃO 3</p><h1>Preparação</h1><p>Impacto plausível na região. Acompanhe a fonte oficial e revise seu plano.</p></div><div class="fresh"><strong>Dados de demonstração</strong><span>Atualização simulada: hoje, 14:32</span></div><article class="card"><span class="tag">EXERCÍCIO</span><h2>Chuva intensa — cenário de teste</h2><p>Alerta fictício para validar a interface. Fonte oficial fictícia; região piloto ainda não definida.</p><button class="primary" data-go="detail">Ver orientação</button></article><button class="secondary checkin" data-go="checkin"><strong>✓ Fazer check-in</strong><span>Você decide texto e destinatário</span></button><article class="card"><span class="tag experimental">LABORATÓRIO</span><h2>Pesquisa de Wi-Fi sensing</h2><p>Trilha experimental separada. Não detecta nem confirma ameaças neste protótipo.</p><button class="secondary" data-go="wifi">Conhecer experimento</button></article></section>
-<section id="detail" class="screen"><button class="back" data-go="home">← Voltar</button><p class="eyebrow">EXERCÍCIO · NÍVEL 3</p><h1>O que fazer agora</h1><ol class="steps"><li><span>1</span><div><strong>Evite áreas alagadas</strong><p>Não atravesse água em movimento.</p></div></li><li><span>2</span><div><strong>Prepare itens essenciais</strong><p>Separe água, documentos, lanterna e carregador.</p></div></li><li><span>3</span><div><strong>Acompanhe canais oficiais</strong><p>Este protótipo não está conectado a fonte real.</p></div></li></ol><div class="card"><h2>Por que nível 3?</h2><p>Fatores simulados: severidade moderada, área aplicável e informação recente. Nenhum sensor local foi usado.</p></div><button class="primary" data-go="checkin">Fazer check-in</button><button class="secondary" data-toast="Guia demonstrativo disponível offline.">Abrir guia offline</button></section>
-<section id="checkin" class="screen"><button class="back" data-go="home">← Voltar</button><p class="eyebrow">AÇÃO SOB SEU CONTROLE</p><h1>Prévia do check-in</h1><fieldset><legend>Como você está?</legend><label><input type="radio" name="state" value="Estou bem" checked>Estou bem</label><label><input type="radio" name="state" value="Preciso de ajuda">Preciso de ajuda</label></fieldset><label><input id="loc" type="checkbox">Incluir localização aproximada</label><div id="preview" class="preview"></div><p>Nada será enviado. No app, o compartilhamento Android abrirá só após confirmação.</p><button class="primary" data-toast="Simulação concluída — nada foi enviado.">Simular compartilhamento</button></section>
-<section id="wifi" class="screen"><button class="back" data-go="home">← Voltar</button><span class="tag experimental">EXPERIMENTO · NÃO É RECURSO DE SEGURANÇA</span><h1>Wi-Fi sensing</h1><p>A pesquisa mostra potencial em hardware e ambientes controlados. Um app Android comum não recebe automaticamente CSI/BFI de todo aparelho ou roteador.</p><article class="card"><h2>Hipótese a testar</h2><p>Se uma combinação específica de aparelho, roteador e acesso de baixo nível gera sinais repetíveis para uma tarefa limitada.</p></article><ul><li>Nunca rotular inferência como pessoa, identidade ou ameaça sem validação.</li><li>Permissão explícita e sessão visível.</li><li>Dados brutos locais e retenção curta.</li><li>O experimento nunca altera sozinho o nível 3→1.</li></ul><button id="cap" class="secondary">Verificar compatibilidade simulada</button><div id="result" class="result" hidden><strong>Resultado simulado: incompatível</strong><p>API CSI/BFI não demonstrada. Nenhum sensoriamento iniciado.</p></div></section>
-<section id="settings" class="screen"><button class="back" data-go="home">← Voltar</button><h1>Configurações</h1><div class="card">Região piloto não definida</div><label><input type="checkbox">Notificações de exercício</label><label><input type="checkbox" checked>Alto contraste</label><button class="danger" data-toast="Histórico simulado apagado.">Apagar histórico local</button></section>
-<nav aria-label="Navegação"><button data-go="home" class="on">⌂<br>Início</button><button data-go="detail">!<br>Alertas</button><button data-go="wifi">≈<br>Laboratório</button></nav><div id="toast" class="toast" role="status"></div></main><script>
-const screens=[...document.querySelectorAll('.screen')],nav=[...document.querySelectorAll('nav button')],toast=document.querySelector('#toast');function go(id){screens.forEach(x=>x.classList.toggle('active',x.id===id));nav.forEach(x=>x.classList.toggle('on',x.dataset.go===id));scrollTo(0,0)}document.querySelectorAll('[data-go]').forEach(x=>x.onclick=()=>go(x.dataset.go));function say(m){toast.textContent=m;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}document.querySelectorAll('[data-toast]').forEach(x=>x.onclick=()=>say(x.dataset.toast));function preview(){let s=document.querySelector('[name=state]:checked').value,l=document.querySelector('#loc').checked?' Localização aproximada será anexada após confirmação.':'';document.querySelector('#preview').textContent=s+'. Check-in iniciado por mim.'+l}document.querySelectorAll('[name=state],#loc').forEach(x=>x.onchange=preview);preview();document.querySelector('#cap').onclick=()=>document.querySelector('#result').hidden=false;
-</script></body></html>
+<!doctype html>
+<html lang="pt-BR" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#101114">
+  <title>DEFENSOR — Situational Awareness Mockup</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.7-2.8 8-7 10-4.2-2-7-5.3-7-10V6l7-3Z"/><path d="M9 12.3 11 14l4-4"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="m9 18-6 3V6l6-3 6 3 6-3v15l-6 3-6-3Z"/><path d="M9 3v15M15 6v15"/></symbol>
+    <symbol id="i-stream" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+    <symbol id="i-protocol" viewBox="0 0 24 24"><path d="M7 3h10v18H7z"/><path d="M9.5 8H15M9.5 12H15M9.5 16H13"/></symbol>
+    <symbol id="i-sensor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4M4.8 4.8a10 10 0 0 0 0 14.4M19.2 4.8a10 10 0 0 1 0 14.4"/></symbol>
+    <symbol id="i-language" viewBox="0 0 24 24"><path d="M4 5h9M8.5 3v2M6 8c1.4 2.7 3.7 4.8 7 6"/><path d="M5 14c3.2-1.2 5.4-3.3 6.6-6M14 21l3.5-9 3.5 9M15.3 18h4.4"/></symbol>
+    <symbol id="i-sources" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="7" cy="7" r="1"/><circle cx="17" cy="12" r="1"/><circle cx="10" cy="17" r="1"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.5 1a8 8 0 0 0-1.7-1L14.3 3h-4.6L9.3 6a8 8 0 0 0-1.7 1L5 6 3 9.4 5.1 11a7 7 0 0 0 0 2L3 14.6 5 18l2.6-1a8 8 0 0 0 1.7 1l.4 3h4.6l.4-3a8 8 0 0 0 1.7-1l2.6 1 2-3.4-2.1-1.6a7 7 0 0 0 .1-1Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+    <symbol id="i-theme" viewBox="0 0 24 24"><path d="M20 15.2A8 8 0 1 1 8.8 4 6.5 6.5 0 0 0 20 15.2Z"/></symbol>
+    <symbol id="i-command" viewBox="0 0 24 24"><path d="M9 8H6a3 3 0 1 1 3-3v14a3 3 0 1 1-3-3h12a3 3 0 1 1-3 3V5a3 3 0 1 1 3 3H9Z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="nav-rail" aria-label="Navegação principal">
+      <button class="brand-mark" data-route="overview" aria-label="DEFENSOR — Situação">
+        <svg><use href="#i-shield"></use></svg>
+      </button>
+      <nav class="rail-nav">
+        <button class="rail-item is-active" data-route="overview" aria-label="Situação" title="Situação">
+          <svg><use href="#i-map"></use></svg><span>Situação</span>
+        </button>
+        <button class="rail-item" data-route="feed" aria-label="Feed" title="Feed">
+          <svg><use href="#i-stream"></use></svg><span>Feed</span>
+        </button>
+        <button class="rail-item" data-route="protocols" aria-label="Protocolos" title="Protocolos">
+          <svg><use href="#i-protocol"></use></svg><span>Protocolos</span>
+        </button>
+        <button class="rail-item" data-route="sensors" aria-label="Sensores" title="Sensores">
+          <svg><use href="#i-sensor"></use></svg><span>Sensores</span>
+        </button>
+        <button class="rail-item" data-route="interpreter" aria-label="Intérprete" title="Intérprete">
+          <svg><use href="#i-language"></use></svg><span>Intérprete</span>
+        </button>
+        <button class="rail-item" data-route="sources" aria-label="Fontes" title="Fontes">
+          <svg><use href="#i-sources"></use></svg><span>Fontes</span>
+        </button>
+      </nav>
+      <div class="rail-bottom">
+        <button class="rail-item" id="themeToggleRail" aria-label="Alternar tema" title="Alternar tema">
+          <svg><use href="#i-theme"></use></svg><span>Tema</span>
+        </button>
+        <button class="rail-item" data-route="settings" aria-label="Configurações" title="Configurações">
+          <svg><use href="#i-settings"></use></svg><span>Ajustes</span>
+        </button>
+      </div>
+    </aside>
+
+    <section class="app-main">
+      <header class="topbar">
+        <div class="product-title">
+          <span class="desktop-title">DEFENSOR</span>
+          <span class="environment-badge">DEMO</span>
+        </div>
+        <button class="command-trigger" id="commandTrigger" aria-label="Abrir busca e comandos">
+          <svg><use href="#i-search"></use></svg>
+          <span>Buscar eventos, fontes ou ações</span>
+          <kbd>⌘ K</kbd>
+        </button>
+        <div class="topbar-actions">
+          <div class="sync-status" title="Dados simulados">
+            <span class="sync-dot"></span>
+            <span>Simulado · 14:32</span>
+          </div>
+          <button class="icon-button" id="themeToggle" aria-label="Alternar tema">
+            <svg><use href="#i-theme"></use></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="route-view is-active" id="view-overview" data-view="overview">
+          <div class="map-workspace">
+            <div class="map-surface" id="mapSurface" aria-label="Mapa de situação demonstrativo">
+              <div class="map-grid" aria-hidden="true"></div>
+              <div class="world-shape" aria-hidden="true">
+                <span class="land land-a"></span><span class="land land-b"></span><span class="land land-c"></span>
+                <span class="land land-d"></span><span class="land land-e"></span><span class="land land-f"></span>
+              </div>
+
+              <div class="map-header">
+                <div>
+                  <p class="eyebrow">MINHA SITUAÇÃO</p>
+                  <h1>São Vicente · Baixada Santista · demo</h1>
+                </div>
+                <div class="readiness-pill" data-level="3">
+                  <span>Nível 3</span><strong>Preparação</strong>
+                </div>
+              </div>
+
+              <div class="layer-strip" id="layerStrip" aria-label="Camadas de eventos"></div>
+
+              <div id="mapMarkers" class="map-markers"></div>
+
+              <section class="map-summary" id="mySituationSummary" aria-label="Minha situação">
+                <div class="summary-kicker"><span class="pulse"></span> MINHA SITUAÇÃO</div>
+                <p>Calculando projeção situacional…</p>
+              </section>
+
+              <div class="map-legend" aria-label="Legenda">
+                <span><i class="legend-dot conflict"></i>Conflito</span>
+                <span><i class="legend-dot unrest"></i>Unrest</span>
+                <span><i class="legend-dot infra"></i>Infra</span>
+                <span><i class="legend-dot hazard"></i>Hazard</span>
+                <span><i class="legend-dot sensor"></i>Sensor</span>
+              </div>
+            </div>
+
+            <aside class="context-panel" id="contextPanel" aria-live="polite">
+              <div class="panel-empty" id="panelEmpty">
+                <p class="eyebrow">AGORA</p>
+                <h2>Selecione um sinal no mapa</h2>
+                <p>O painel mostra impacto, frescor, origem, incerteza e próxima ação sem esconder divergências entre fontes.</p>
+                <div class="micro-timeline" id="microTimeline"></div>
+              </div>
+              <div class="event-detail" id="eventDetail" hidden></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="route-view" id="view-feed" data-view="feed">
+          <div class="content-page">
+            <header class="page-heading">
+              <div><p class="eyebrow">EVENT STREAM</p><h1>Feed de situação</h1><p>Conflito, segurança pública, infraestrutura, hazards e sensores em uma linha temporal única.</p></div>
+              <button class="filter-button" id="feedFilterButton"><svg><use href="#i-filter"></use></svg> Filtros</button>
+            </header>
+            <div class="feed-layout">
+              <div class="event-feed" id="eventFeed"></div>
+              <aside class="intel-sidebar">
+                <h3>Cobertura ativa</h3>
+                <div class="coverage-list" id="coverageList"></div>
+                <button class="secondary-button" data-route="sources">Ver registry de fontes</button>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="route-view" id="view-protocols" data-view="protocols">
+          <div class="content-page narrow">
+            <header class="page-heading"><div><p class="eyebrow">OFFLINE-FIRST</p><h1>Protocolos</h1><p>Orientações versionadas por situação, disponíveis mesmo sem conexão.</p></div></header>
+            <div class="protocol-grid" id="protocolGrid"></div>
+          </div>
+        </section>
+
+        <section class="route-view" id="view-sensors" data-view="sensors">
+          <div class="content-page">
+            <header class="page-heading"><div><p class="eyebrow">SENSOR ROUTER</p><h1>Sensores locais</h1><p>Backends distintos convergem para o mesmo SensorEvent com qualidade e calibração explícitas.</p></div></header>
+            <div class="sensor-layout" id="sensorLayout"></div>
+          </div>
+        </section>
+
+        <section class="route-view" id="view-interpreter" data-view="interpreter">
+          <div class="content-page narrow">
+            <header class="page-heading"><div><p class="eyebrow">ON-DEVICE</p><h1>Intérprete</h1><p>Fluxo bilateral offline de voz com transcrição, identificação de idioma, tradução e TTS local.</p></div></header>
+            <section class="interpreter-console">
+              <div class="language-pair"><button>Português</button><span>↔</span><button>Русский</button></div>
+              <div class="conversation" id="conversation"></div>
+              <button class="talk-button" id="talkButton"><span class="talk-indicator"></span><strong>Segure para falar</strong><small>simulação local</small></button>
+            </section>
+          </div>
+        </section>
+
+        <section class="route-view" id="view-sources" data-view="sources">
+          <div class="content-page">
+            <header class="page-heading"><div><p class="eyebrow">SOURCE REGISTRY</p><h1>Fontes e cobertura</h1><p>Hubs globais, datasets especializados e autoridades locais com origem e frescor preservados.</p></div></header>
+            <div class="source-table-wrap"><table class="source-table"><thead><tr><th>Fonte</th><th>Domínio</th><th>Classe</th><th>Frescor</th><th>Estado</th></tr></thead><tbody id="sourceTable"></tbody></table></div>
+          </div>
+        </section>
+
+        <section class="route-view" id="view-settings" data-view="settings">
+          <div class="content-page narrow">
+            <header class="page-heading"><div><p class="eyebrow">PREFERÊNCIAS</p><h1>Configurações</h1><p>O mockup salva apenas preferências visuais no navegador.</p></div></header>
+            <div class="settings-group">
+              <div><strong>Aparência</strong><span>Seguir sistema, claro ou escuro</span></div>
+              <div class="segmented" id="themeSegments">
+                <button data-theme-choice="system">Sistema</button>
+                <button data-theme-choice="light">Claro</button>
+                <button data-theme-choice="dark">Escuro</button>
+              </div>
+            </div>
+            <div class="settings-group">
+              <div><strong>Região piloto</strong><span>Sem geolocalização real neste protótipo</span></div>
+              <button class="secondary-button">São Paulo · demonstração</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <nav class="mobile-nav" aria-label="Navegação móvel">
+      <button class="is-active" data-route="overview"><svg><use href="#i-map"></use></svg><span>Situação</span></button>
+      <button data-route="feed"><svg><use href="#i-stream"></use></svg><span>Feed</span></button>
+      <button data-route="protocols"><svg><use href="#i-protocol"></use></svg><span>Protocolos</span></button>
+      <button data-route="sensors"><svg><use href="#i-sensor"></use></svg><span>Sensores</span></button>
+      <button data-route="interpreter"><svg><use href="#i-language"></use></svg><span>Intérprete</span></button>
+    </nav>
+  </div>
+
+  <div class="command-backdrop" id="commandBackdrop" hidden>
+    <section class="command-palette" role="dialog" aria-modal="true" aria-labelledby="commandTitle">
+      <header>
+        <svg><use href="#i-search"></use></svg>
+        <input id="commandInput" autocomplete="off" placeholder="Buscar evento, fonte ou ação…">
+        <kbd>Esc</kbd>
+      </header>
+      <div class="command-results" id="commandResults"></div>
+    </section>
+  </div>
+
+  <div class="mobile-sheet" id="mobileSheet" hidden>
+    <button class="sheet-scrim" aria-label="Fechar detalhe"></button>
+    <section class="sheet-body" role="dialog" aria-modal="true">
+      <div class="sheet-handle"></div>
+      <button class="sheet-close icon-button" aria-label="Fechar"><svg><use href="#i-close"></use></svg></button>
+      <div id="mobileEventDetail"></div>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

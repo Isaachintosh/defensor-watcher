@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.2.0",
+  "status": "prototype",
+  "privacy_principle": "data_minimization_and_local_evaluation_first",
+  "fields": {
+    "profile_id": {"type":"string","required":true,"sensitive":false},
+    "configured_areas": {"type":"array","required":false,"sensitive":"location_context"},
+    "dependencies": {
+      "type":"object",
+      "required":false,
+      "allowed_dimensions":["mobility","power","water","communications","health","shelter","supplies","accessibility","household_separation","information_access"],
+      "rule":"Use typed dependency tags; critical evaluation must not require unbounded free text."
+    },
+    "transport_capabilities": {"type":"array","required":false},
+    "mobility_needs": {"type":"array","required":false,"sensitive":true},
+    "accessibility_needs": {"type":"array","required":false,"sensitive":true},
+    "meeting_points": {"type":"array","required":false,"sensitive":"location_context"},
+    "essential_contacts": {"type":"array","required":false,"sensitive":true},
+    "essential_dependencies": {"type":"array","required":false,"sensitive":true},
+    "offline_storage_consent": {"type":"boolean","required":false}
+  },
+  "controls": ["export_profile","delete_profile","clear_offline_pack"],
+  "prohibited_defaults": [
+    "continuous_precise_location",
+    "unbounded_free_text_for_critical_rules",
+    "cloud_required_for_local_evaluation"
+  ]
+}

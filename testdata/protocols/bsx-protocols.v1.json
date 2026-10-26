@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "notice": "Synthetic fixtures only. Not real emergency guidance.",
+  "protocols": [
+    {
+      "protocol_id": "fixture-mobility-prepare",
+      "version": "1",
+      "status": "ACTIVE",
+      "authority": "FIXTURE_AUTHORITY",
+      "jurisdiction": "BSX_FIXTURE",
+      "applicable_event_types": ["MOBILITY_DISRUPTION"],
+      "applicable_conditions": ["ROUTE_UNAVAILABLE"],
+      "action": "Use the previously configured alternate plan from the fixture.",
+      "source_document": "Synthetic protocol fixture",
+      "source_reference": "fixture://protocol/mobility-prepare",
+      "valid_from": "2026-01-01T00:00:00.000Z",
+      "valid_until": "2027-01-01T00:00:00.000Z",
+      "language": "pt-BR",
+      "original_text": "Fixture only: use the configured alternate plan.",
+      "offline_version": true,
+      "urgency": "PREPARE"
+    },
+    {
+      "protocol_id": "fixture-expired",
+      "version": "1",
+      "status": "ACTIVE",
+      "authority": "FIXTURE_AUTHORITY",
+      "jurisdiction": "BSX_FIXTURE",
+      "applicable_event_types": ["MOBILITY_DISRUPTION"],
+      "applicable_conditions": ["ANY"],
+      "action": "Expired fixture.",
+      "source_document": "Synthetic expired fixture",
+      "source_reference": "fixture://protocol/expired",
+      "valid_until": "2026-01-01T00:00:00.000Z",
+      "language": "pt-BR",
+      "original_text": "Expired fixture.",
+      "offline_version": true,
+      "urgency": "ADVISORY"
+    }
+  ]
+}

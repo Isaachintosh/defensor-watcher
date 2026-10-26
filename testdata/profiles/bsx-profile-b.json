@@ -1,0 +1,13 @@
+{
+  "profile_id": "BSX-PROFILE-B",
+  "configured_areas": ["São Vicente", "Santos"],
+  "dependencies": {
+    "mobility": ["walking-local"],
+    "communications": ["sms"],
+    "power": [],
+    "household_separation": []
+  },
+  "transport_capabilities": ["walking", "bicycle"],
+  "meeting_points": ["MP-C"],
+  "offline_storage_consent": true
+}

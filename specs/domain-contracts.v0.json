@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.1.0",
+  "status": "prototype",
+  "invariants": [
+    "EVENT_SEVERITY_NE_PERSONAL_IMPACT",
+    "STALE_NE_SAFE",
+    "UNKNOWN_NE_NORMAL",
+    "OFFLINE_NE_NO_EVENT",
+    "NO_GUIDANCE_WITHOUT_PROVENANCE"
+  ],
+  "provenance_states": [
+    "AUTHORITATIVE",
+    "CORROBORATED",
+    "SINGLE_SOURCE",
+    "CONFLICTING",
+    "UNKNOWN"
+  ],
+  "connectivity_states": [
+    "ONLINE",
+    "DEGRADED",
+    "OFFLINE",
+    "UNKNOWN"
+  ],
+  "pipeline": [
+    "Source",
+    "Observation",
+    "EventCandidate",
+    "Event",
+    "CivilImpactAssessment",
+    "GuidanceSet",
+    "MySituation"
+  ],
+  "CivilImpactAssessment": {
+    "dimensions": [
+      "mobility",
+      "power",
+      "water",
+      "communications",
+      "health",
+      "shelter",
+      "supplies",
+      "accessibility",
+      "household_separation",
+      "information_access"
+    ],
+    "value_states": [
+      "UNAFFECTED",
+      "WATCH",
+      "DEGRADED",
+      "BLOCKED",
+      "UNKNOWN"
+    ],
+    "rule": "A source event is evaluated against explicit geography, freshness and ReadinessProfile capabilities. Missing inputs resolve to UNKNOWN."
+  },
+  "MySituation": {
+    "required": [
+      "computed_at",
+      "situation_state",
+      "what_changed",
+      "civil_impacts",
+      "guidance",
+      "provenance",
+      "last_successful_sync",
+      "information_age",
+      "offline_pack_state"
+    ],
+    "situation_states": [
+      "NORMAL",
+      "ATTENTION",
+      "PREPARATION",
+      "ACTION",
+      "UNKNOWN"
+    ],
+    "rule": "NORMAL requires positive current evidence; it cannot be inferred from silence, outage or stale inputs."
+  },
+  "ProvenanceRecord": {
+    "fields": [
+      "source_id",
+      "source_class",
+      "authority",
+      "jurisdiction",
+      "original_timestamp",
+      "ingestion_timestamp",
+      "transport",
+      "original_reference",
+      "payload_hash",
+      "verification_method",
+      "corroborating_sources",
+      "conflicting_sources",
+      "freshness"
+    ]
+  }
+}
